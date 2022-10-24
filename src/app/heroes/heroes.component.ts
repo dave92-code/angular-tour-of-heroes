@@ -11,7 +11,7 @@ import { MessagesService } from '../messages.service';
 })
 export class HeroesComponent implements OnInit {
 
-  heroes:Hero[] = [];
+  heroes: Hero[] = [];
   selectedHero?: Hero;
 
   hero: Hero = {
@@ -19,7 +19,7 @@ export class HeroesComponent implements OnInit {
     name: 'Windstorm'
   }
 
-  constructor(private heroService:HeroService, private messageService:MessagesService) { }
+  constructor(private heroService: HeroService, private messageService: MessagesService) { }
 
   ngOnInit(): void {
     this.getHeroes();
@@ -33,8 +33,8 @@ export class HeroesComponent implements OnInit {
   /**sacamos los heroes por service
    * 
    */
-  getHeroes(){
-    this.heroService.getHeroes().subscribe(res=>{
+  getHeroes() {
+    this.heroService.getHeroes().subscribe(res => {
       this.heroes = res;
     });
   }
