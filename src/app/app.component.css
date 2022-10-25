@@ -1,0 +1,11 @@
+.button-heroes{
+    padding: 10px 20px 10px;
+    font-size: 18px;
+    background-color: rgb(206, 198, 198);
+    color: #000;
+    border-radius: 25px;
+    cursor: pointer;
+}
+.button-heroes:hover{
+    background-color: rgb(112, 109, 109)
+}
