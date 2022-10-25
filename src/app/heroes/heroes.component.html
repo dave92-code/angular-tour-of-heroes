@@ -1,10 +1,13 @@
+
 <h2>My heroes</h2>
 <ul class = "heroes">
-    <li *ngFor = "let hero of heroes">
+    <li *ngFor = "let hero of heroes" class="heroes_list">
         <a routerLink="/detail/{{hero.id}}">
             <span class="badge">{{hero.id}}</span>{{hero.name}}
         </a>
         <app-label [text] = "hero.name" (textEmit) = "hero.name = $event"></app-label>
     </li>
 </ul>
+
+
 

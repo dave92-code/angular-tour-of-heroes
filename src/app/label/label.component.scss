@@ -1,7 +1,15 @@
 .label{
-    &_text{
-        color: blue;
-        margin-right: 8px;
+    &_container{
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        &_input{
+            font-size: 18px;
+            padding: 7px 20px;
+        }
+        &_span{
+            
+        }
     }
 }
 

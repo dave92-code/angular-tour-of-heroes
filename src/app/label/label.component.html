@@ -1,9 +1,9 @@
 <div class="label">
-    <div>
-        <!-- <span class="label_text">{{text}}</span> -->
-        <span>*</span>
-    </div>
-    <div>
-        <input id="holaInput" name="holaInput" [(ngModel)]="text" (ngModelChange)="onChangeText()">
+    <!-- <div>
+        <span class="label_text">{{text}}</span>
+    </div> -->
+    <div class="label_container">
+        <input class="label_container_input" id="holaInput" name="holaInput" [(ngModel)]="text" (ngModelChange)="onChangeText()">
+        <span class="label_container_span">-</span>
     </div>
 </div>
