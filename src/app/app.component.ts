@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
+import { IconsService } from './icons.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -8,7 +9,11 @@ import { Router, RouterLink } from '@angular/router';
 export class AppComponent {
   title = 'Tour of Heroes';
 
-  constructor(private router:Router) { }
+  constructor(private router:Router, private iconsService:IconsService) { }
+
+  ngOninit(){
+    this.iconsService.registerIcons();
+  }
 
   goTo(route:string){
     this.router.navigate([route])
