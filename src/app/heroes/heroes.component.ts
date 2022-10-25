@@ -39,9 +39,14 @@ export class HeroesComponent implements OnInit {
     });
   }
 
-  receiveFromLabel(event:string, hero:Hero){
-    console.log('soy el evento de label: ');
-    console.log(event)
-    hero.name = event;
-  }
+  /**
+   * 
+   * @param event string
+   * @param hero el heroe seleccionado
+   */
+  // receiveFromLabel(event:string, hero:Hero){
+  //   console.log('soy el evento de label: ');
+  //   console.log(event)
+  //   hero.name = event;
+  // }
 }
