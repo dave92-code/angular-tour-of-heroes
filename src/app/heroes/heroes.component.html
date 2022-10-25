@@ -4,6 +4,7 @@
         <a routerLink="/detail/{{hero.id}}">
             <span class="badge">{{hero.id}}</span>{{hero.name}}
         </a>
+        <app-label [text] = "hero.name" (textEmit) = "hero.name = $event"></app-label>
     </li>
 </ul>
 
