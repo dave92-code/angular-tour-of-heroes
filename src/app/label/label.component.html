@@ -4,6 +4,6 @@
     </div> -->
     <div class="label_container">
         <input class="label_container_input" id="holaInput" name="holaInput" [(ngModel)]="text" (ngModelChange)="onChangeText()">
-        <mat-icon class="label_container_star" svgIcon = "star"></mat-icon>
+        <mat-icon class="label_container_star" [ngStyle]="{ 'color' : selected === true ? 'yellow' : 'red' }" svgIcon = "star"></mat-icon>
     </div>
 </div>

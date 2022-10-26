@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Hero } from '../hero';
 // import { HEROES } from '../mock-heroes';
 import { HeroService } from '../hero.service';
@@ -19,7 +20,7 @@ export class HeroesComponent implements OnInit {
     name: 'Windstorm'
   }
 
-  constructor(private heroService: HeroService, private messageService: MessagesService) { }
+  constructor(private heroService: HeroService, private messageService: MessagesService, private router:Router) { }
 
   ngOnInit(): void {
     this.getHeroes();
@@ -33,12 +34,23 @@ export class HeroesComponent implements OnInit {
   /**sacamos los heroes por service
    * 
    */
-  getHeroes() {
+  getHeroes(): void {
     this.heroService.getHeroes().subscribe(res => {
       this.heroes = res;
     });
   }
 
+  /**escuchamos al event emitter para cambiar el nombre del hero y saber cual hemos cambiado para pintar la estrella */
+  listenner(event: string, hero: Hero): void {
+    hero.name = event;
+    hero['selected'] = true;
+  }
+
+
+  navigateToHero(hero: Hero): void {
+    // this.router.navigate(['/detail/'+hero.id])
+    hero.selected = !hero.selected;
+  }
   /**
    * 
    * @param event string
