@@ -18,4 +18,16 @@ export class AppComponent {
   goTo(route:string){
     this.router.navigate([route])
   }
+
+  //angular json stilos
+  // "styles": [
+  //   "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+  //   "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+  //   "src/styles.scss"
+  // ]
+  //angular json estilos test
+  // "styles": [
+  //   "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+  //   "src/styles.scss"
+  // ]
 }
