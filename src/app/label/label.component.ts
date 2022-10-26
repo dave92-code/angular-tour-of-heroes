@@ -10,7 +10,7 @@ export class LabelComponent implements OnInit {
   // star = '/assets/svg/icons/star.svg'
 
   @Input() text?: string;
-  @Input() selected: boolean;
+  selected = false;
   @Output() textChange: EventEmitter<any> = new EventEmitter(); 
   constructor() { }
 
@@ -20,6 +20,7 @@ export class LabelComponent implements OnInit {
   onChangeText(){
     console.log('emiting text'+ this.text)
     this.textChange.emit(this.text);
+    this.selected = true;
   }
 
 }
