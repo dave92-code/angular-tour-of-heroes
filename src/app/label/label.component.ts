@@ -10,7 +10,7 @@ export class LabelComponent implements OnInit {
   // star = '/assets/svg/icons/star.svg'
 
   @Input() text?: string;
-  @Input() selected?: boolean;
+  @Input() selected: boolean;
   @Output() textChange: EventEmitter<any> = new EventEmitter(); 
   constructor() { }
 

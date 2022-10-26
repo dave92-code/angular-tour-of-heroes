@@ -1,6 +1,5 @@
-
-<h2>My heroes</h2>
-<!-- <ul class = "heroes">
+<div class="heroes container-fluid">
+  <!-- <ul class = "heroes">
     <li *ngFor = "let hero of heroes" class="heroes_list">
         <a (click)="navigateToHero(hero)">
             <span class="badge">{{hero.id}}</span>{{hero.name}}
@@ -8,16 +7,22 @@
         <app-label [text] = "hero.name" [selected] = "hero.selected" (textChange) = "hero.name = $event"></app-label>
     </li>
 </ul> -->
-
-<ul class = "heroes">
-    <li *ngFor = "let user of users" class="heroes_list">
-        <a>
-          <span class="badge">{{hero.id}}</span>{{user.name}}
-        </a>
-        <app-label [(text)] = "user.name"></app-label>
-        <!-- <app-label [text] = "hero.name" [selected] = "hero.selected" (textChange) = "hero.name = $event"></app-label> -->
-    </li>
-</ul>
-
-
-
+<div class="row gap-4">
+  <!-- <div class="col-4" *ngFor></div> -->
+  <div class="heroes_card col-4 d-flex flex-column" *ngFor="let user of users">
+    <span class="heroes_card_name">{{user.name}}</span>
+    <span class="heroes_card_email">{{user.email}}</span>
+    <span class="heroes_card_phone">{{user.phone}}</span>
+    <span class="heroes_card_phone">{{user.address?.city}}</span>
+    <app-label [(text)]="user.name"></app-label>
+  </div>
+</div>
+  
+    <!-- <div *ngFor="let user of users" class="row">
+      <a class="col-sm">
+        <span class="badge">{{hero.id}}</span>{{user.name}}
+      </a>
+      <app-label class="col-sm" [(text)]="user.name"></app-label>
+    </div>
+   -->
+</div>

@@ -16,8 +16,8 @@ import { User } from '../models/user.model';
 export class HeroesComponent implements OnInit {
 
   heroes: Hero[] = [];
-  selectedHero?: Hero;
-  users?: User[];
+  selectedHero: Hero;
+  users: User[];
 
   hero: Hero = {
     id: 1,

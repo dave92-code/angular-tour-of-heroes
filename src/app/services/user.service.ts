@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { User } from '../models/user.model';
+import { firstValueFrom } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -17,15 +18,15 @@ export class UserService {
   }
 
   /**sacamos los users con promesa */
-  getUsersPromise(): Promise<User[] | undefined> {
+  getUsersPromise(): Promise<User[]> {
     const url = 'https://jsonplaceholder.typicode.com/users';
-    return this.http.get<User[]>(url).toPromise();
+     return firstValueFrom(this.http.get<User[]>(url))
   }
 
   /**sacamos los users con await */
-  getUsersPromiseAsync(): Promise<User[] | undefined> {
+  getUsersPromiseAsync(): Promise<User[]> {
     const url = 'https://jsonplaceholder.typicode.com/users';
-    return  this.http.get<User[]>(url).toPromise();
+    return  firstValueFrom(this.http.get<User[]>(url));
   }
 
 }

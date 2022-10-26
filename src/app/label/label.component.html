@@ -1,9 +1,7 @@
-<div class="label">
+<div class="label row d-flex justify-content-between align-items-center">
     <!-- <div>
         <span class="label_text">{{text}}</span>
     </div> -->
-    <div class="label_container">
-        <input class="label_container_input" id="holaInput" name="holaInput" [(ngModel)]="text" (ngModelChange)="onChangeText()">
-        <mat-icon class="label_container_star" [ngStyle]="{ 'color' : selected === true ? 'yellow' : 'red' }" svgIcon = "star"></mat-icon>
-    </div>
+        <input class="label_input col-10" id="holaInput" name="holaInput" [(ngModel)]="text" (ngModelChange)="onChangeText()">
+        <mat-icon class="label_star col" [ngStyle]="{ 'color' : selected === true ? 'yellow' : 'red' }" svgIcon = "star"></mat-icon>
 </div>
