@@ -18,6 +18,7 @@ export class LabelComponent implements OnInit {
   }
 
   onChangeText(){
+    console.log('emiting text'+ this.text)
     this.textChange.emit(this.text);
   }
 

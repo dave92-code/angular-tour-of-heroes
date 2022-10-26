@@ -12,7 +12,7 @@
 <ul class = "heroes">
     <li *ngFor = "let user of users" class="heroes_list">
         <a>
-          <span class="badge">{{hero.id}}</span>{{user.email}}
+          <span class="badge">{{hero.id}}</span>{{user.name}}
         </a>
         <app-label [(text)] = "user.name"></app-label>
         <!-- <app-label [text] = "hero.name" [selected] = "hero.selected" (textChange) = "hero.name = $event"></app-label> -->
