@@ -4,6 +4,9 @@ import { Hero } from '../hero';
 // import { HEROES } from '../mock-heroes';
 import { HeroService } from '../hero.service';
 import { MessagesService } from '../messages.service';
+import { HttpClient } from '@angular/common/http';
+import { UserService } from '../services/user.service';
+import { User } from '../models/user.model';
 
 @Component({
   selector: 'app-heroes',
@@ -14,16 +17,20 @@ export class HeroesComponent implements OnInit {
 
   heroes: Hero[] = [];
   selectedHero?: Hero;
+  users?: User[];
 
   hero: Hero = {
     id: 1,
     name: 'Windstorm'
   }
 
-  constructor(private heroService: HeroService, private messageService: MessagesService, private router:Router) { }
+  constructor(private heroService: HeroService, private messageService: MessagesService, private router: Router, private http: HttpClient, private userService: UserService) { }
 
   ngOnInit(): void {
     this.getHeroes();
+    // this.getUsers();
+    // this.getUsersPromise();
+    this.getUsersPromiseAsync();
   }
 
   onSelect(hero: Hero): void {
@@ -40,6 +47,28 @@ export class HeroesComponent implements OnInit {
     });
   }
 
+  /**sacamos los users con susbcribe*/
+  getUsers(): void {
+    this.userService.getUsers().subscribe(data => {
+      this.users = data;
+    })
+  }
+
+
+  /**sacamos los users con promesa */
+  getUsersPromise(): void {
+    this.userService.getUsersPromise().then(data => {
+      this.users = data;
+    })
+  }
+
+  /**sacamos los users con await */
+  async getUsersPromiseAsync(): Promise<void> {
+    this.users = await this.userService.getUsersPromiseAsync();
+    // const url = 'https://jsonplaceholder.typicode.com/users';
+    // this.users = await this.http.get(url).toPromise()
+  }
+
   /**escuchamos al event emitter para cambiar el nombre del hero y saber cual hemos cambiado para pintar la estrella */
   listenner(event: string, hero: Hero): void {
     hero.name = event;
@@ -51,7 +80,7 @@ export class HeroesComponent implements OnInit {
     // this.router.navigate(['/detail/'+hero.id])
     hero.selected = !hero.selected;
   }
-  
+
   /**
    * 
    * @param event string
