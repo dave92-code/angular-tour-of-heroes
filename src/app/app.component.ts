@@ -11,7 +11,7 @@ export class AppComponent {
 
   constructor(private router:Router, private iconsService:IconsService) { }
 
-  ngOninit(){
+  ngOnInit(){
     this.iconsService.registerIcons();
   }
 

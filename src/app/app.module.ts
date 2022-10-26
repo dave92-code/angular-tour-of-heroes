@@ -12,6 +12,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { LabelComponent } from './label/label.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { MatIconModule } from '@angular/material/icon';
     AppRoutingModule,
     FormsModule,
     BrowserAnimationsModule,
-    MatIconModule
+    MatIconModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

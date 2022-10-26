@@ -7,6 +7,8 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class LabelComponent implements OnInit {
 
+  // star = '/assets/svg/icons/star.svg'
+
   @Input() text?: string;
   @Output() textEmit: EventEmitter<any> = new EventEmitter(); 
   constructor() { }
@@ -16,7 +18,6 @@ export class LabelComponent implements OnInit {
 
   onChangeText(){
     this.textEmit.emit(this.text);
-    console.log('cambia');
   }
 
 }
