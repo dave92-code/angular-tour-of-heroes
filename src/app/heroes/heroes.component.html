@@ -5,7 +5,7 @@
         <a (click)="navigateToHero(hero)">
             <span class="badge">{{hero.id}}</span>{{hero.name}}
         </a>
-        <app-label [text] = "hero.name" [selected] = "hero.selected" (textEmit) = "hero.name = $event"></app-label>
+        <app-label [text] = "hero.name" [selected] = "hero.selected" (textChange) = "hero.name = $event"></app-label>
     </li>
 </ul>
 

@@ -11,14 +11,14 @@ export class LabelComponent implements OnInit {
 
   @Input() text?: string;
   @Input() selected?: boolean;
-  @Output() textEmit: EventEmitter<any> = new EventEmitter(); 
+  @Output() textChange: EventEmitter<any> = new EventEmitter(); 
   constructor() { }
 
   ngOnInit(): void {
   }
 
   onChangeText(){
-    this.textEmit.emit(this.text);
+    this.textChange.emit(this.text);
   }
 
 }

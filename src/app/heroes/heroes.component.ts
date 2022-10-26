@@ -51,6 +51,7 @@ export class HeroesComponent implements OnInit {
     // this.router.navigate(['/detail/'+hero.id])
     hero.selected = !hero.selected;
   }
+  
   /**
    * 
    * @param event string
