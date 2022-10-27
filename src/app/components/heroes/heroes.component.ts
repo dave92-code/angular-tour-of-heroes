@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Hero } from '../hero';
+import { Hero } from '../../hero';
 // import { HEROES } from '../mock-heroes';
-import { HeroService } from '../hero.service';
-import { MessagesService } from '../messages.service';
+import { HeroService } from '../../services/hero.service';
+import { MessagesService } from '../../messages.service';
 import { HttpClient } from '@angular/common/http';
-import { UserService } from '../services/user.service';
-import { User } from '../models/user.model';
-import { heroTypes, heroTypesNames } from '../constants/hero.constants';
+import { UserService } from '../../services/user.service';
+import { User } from '../../models/user.model';
+import { heroTypes, heroTypesNames } from '../../constants/hero.constants';
 
 @Component({
   selector: 'app-heroes',

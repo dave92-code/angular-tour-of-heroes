@@ -22,8 +22,9 @@
 
   <div class="heroes_separator"></div>
 
-  <div class="heroes_info row gap-4">
-    <span class="heroes_info_title col-12">My Heroes</span>
+  <div class="heroes_section">My Heroes</div>
+
+  <div class="heroes_info row gap-4 no-gutters">
     <!-- <div class="col-4" *ngFor></div> -->
     <div class="heroes_info_card col-4 row d-flex flex-column justify-between gap-2" *ngFor="let hero of heroes">
       <div class="heroes_info_card_id col-12" routerLink="/detail/{{hero.id}}">{{hero.id}}</div>
@@ -51,13 +52,8 @@
     </div>
   </div>
 
+  <div class="heroes_separator"></div>
 
+  <div class="heroes_section">Pruebas layouts</div>
 
-  <!-- <div *ngFor="let user of users" class="row">
-      <a class="col-sm">
-        <span class="badge">{{hero.id}}</span>{{user.name}}
-      </a>
-      <app-label class="col-sm" [(text)]="user.name"></app-label>
-    </div>
-   -->
 </div>

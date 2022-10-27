@@ -13,32 +13,36 @@
     width: 100%;
   }
 
+  &_section {
+    font-size: 34px;
+    font-weight: 600;
+  }
+
   &_info {
-    &_title{
-      font-size: 34px;
-      font-weight: 600;
-    }
     &_card {
       background-color: #fff;
       border: 1px solid #000;
-      width: calc(33.33% - 20px);
+      
       padding: 15px;
-      &_name-container{
+
+      &_name-container {
         &_name {
           font-size: 18px;
           font-weight: 600;
           cursor: pointer;
         }
-        &_name:hover{
+
+        &_name:hover {
           color: rgb(106, 106, 106);
         }
-        &_separator{
+
+        &_separator {
           font-size: 20px;
           font-weight: 600;
         }
       }
 
-      &_id{
+      &_id {
         font-size: 20px;
         font-weight: 300;
         padding: 10px;
@@ -48,17 +52,18 @@
         cursor: pointer;
       }
 
-      &_id:hover{
+      &_id:hover {
         background-color: rgb(25, 66, 190);
       }
     }
   }
 
   &_users {
-    &_title{
+    &_title {
       font-size: 34px;
       font-weight: 600;
     }
+
     &_card {
       background-color: #fff;
       border: 1px solid #000;
