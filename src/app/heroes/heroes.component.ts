@@ -7,6 +7,7 @@ import { MessagesService } from '../messages.service';
 import { HttpClient } from '@angular/common/http';
 import { UserService } from '../services/user.service';
 import { User } from '../models/user.model';
+import { heroTypes, heroTypesNames } from '../constants/hero.constants';
 
 @Component({
   selector: 'app-heroes',
@@ -19,10 +20,13 @@ export class HeroesComponent implements OnInit {
   
   users: User[];
 
-  hero: Hero = {
-    id: 1,
-    name: 'Windstorm'
-  }
+  // hero: Hero = {
+  //   id: 1,
+  //   name: 'Windstorm'
+  // }
+
+  heroTypes = heroTypes
+  heroTypesNames = heroTypesNames
 
   constructor(private heroService: HeroService, private messageService: MessagesService, private router: Router, private http: HttpClient, private userService: UserService) { }
 

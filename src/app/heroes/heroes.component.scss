@@ -23,15 +23,19 @@
       border: 1px solid #000;
       width: calc(33.33% - 20px);
       padding: 15px;
-
-      &_name {
-        font-size: 18px;
-        font-weight: 600;
-        cursor: pointer;
-      }
-
-      &_name:hover{
-        color: rgb(106, 106, 106);
+      &_name-container{
+        &_name {
+          font-size: 18px;
+          font-weight: 600;
+          cursor: pointer;
+        }
+        &_name:hover{
+          color: rgb(106, 106, 106);
+        }
+        &_separator{
+          font-size: 20px;
+          font-weight: 600;
+        }
       }
 
       &_id{
@@ -40,7 +44,6 @@
         padding: 10px;
         background-color: rgb(13, 36, 103);
         color: #fff;
-        width: 10%;
         text-align: center;
         cursor: pointer;
       }

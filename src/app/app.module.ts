@@ -13,6 +13,7 @@ import { LabelComponent } from './label/label.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
+import { HeroTypeComponent } from './hero-type/hero-type.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { HttpClientModule } from '@angular/common/http';
     HeroDetailComponent,
     MessagesComponent,
     DashboardComponent,
-    LabelComponent
+    LabelComponent,
+    HeroTypeComponent
   ],
   imports: [
     BrowserModule,
