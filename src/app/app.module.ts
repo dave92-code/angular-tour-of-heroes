@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { HeroesComponent } from './components/heroes/heroes.component';
 import { HeroDetailComponent } from './components/hero-detail/hero-detail.component';
 import { HeroService } from './services/hero.service';
-import { MessagesComponent } from './messages/messages.component';
+import { MessagesComponent } from './components/messages/messages.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { LabelComponent } from './components/label/label.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -18,12 +18,12 @@ import { HeroTypeComponent } from './components/hero-type/hero-type.component';
 @NgModule({
   declarations: [
     AppComponent,
-    HeroesComponent,
     HeroDetailComponent,
     MessagesComponent,
     DashboardComponent,
     LabelComponent,
-    HeroTypeComponent
+    HeroTypeComponent,
+    HeroesComponent
   ],
   imports: [
     BrowserModule,

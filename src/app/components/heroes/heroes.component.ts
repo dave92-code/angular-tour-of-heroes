@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Hero } from '../../hero';
+import { Hero } from '../../models/hero.model';
 // import { HEROES } from '../mock-heroes';
 import { HeroService } from '../../services/hero.service';
-import { MessagesService } from '../../messages.service';
+import { MessagesService } from 'src/app/services/messages.service';
 import { HttpClient } from '@angular/common/http';
 import { UserService } from '../../services/user.service';
 import { User } from '../../models/user.model';
