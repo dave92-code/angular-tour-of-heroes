@@ -1,4 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { outputAst } from '@angular/compiler';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { heroTypes, heroTypesNames } from 'src/app/constants/hero.constants';
 
 @Component({
   selector: 'app-hero-type',
@@ -7,7 +9,11 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class HeroTypeComponent implements OnInit {
 
-  @Input() type:string;
+  heroTypes = heroTypes
+  heroTypesNames = heroTypesNames
+  
+  @Input() typeId:number;
+  @Output() typeIdChange: EventEmitter<number> = new EventEmitter();
 
   constructor() { }
 

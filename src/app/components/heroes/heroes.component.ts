@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Hero } from '../../models/hero.model';
+import { Hero, HeroClass } from '../../models/hero.model';
 // import { HEROES } from '../mock-heroes';
 import { HeroService } from '../../services/hero.service';
 import { MessagesService } from 'src/app/services/messages.service';
@@ -17,6 +17,7 @@ import { heroTypes, heroTypesNames } from '../../constants/hero.constants';
 export class HeroesComponent implements OnInit {
 
   heroes: Hero[] = [];
+  newHero: HeroClass = new HeroClass();
   
   users: User[];
 
@@ -25,8 +26,8 @@ export class HeroesComponent implements OnInit {
   //   name: 'Windstorm'
   // }
 
-  heroTypes = heroTypes
-  heroTypesNames = heroTypesNames
+  // heroTypes = heroTypes
+  // heroTypesNames = heroTypesNames
 
   constructor(private heroService: HeroService, private messageService: MessagesService, private router: Router, private http: HttpClient, private userService: UserService) { }
 
