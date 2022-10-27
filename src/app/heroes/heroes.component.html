@@ -7,14 +7,26 @@
         <app-label [text] = "hero.name" [selected] = "hero.selected" (textChange) = "hero.name = $event"></app-label>
     </li>
 </ul> -->
-<div class="row gap-4">
-  <!-- <div class="col-4" *ngFor></div> -->
-  <div class="heroes_card col-4 d-flex flex-column" *ngFor="let user of users">
-    <span class="heroes_card_name">{{user.name}}</span>
-    <span class="heroes_card_email">{{user.email}}</span>
-    <span class="heroes_card_phone">{{user.phone}}</span>
-    <span class="heroes_card_phone">{{user.address?.city}}</span>
+<div class="heroes_users row gap-4">
+ <span class="heroes_users_title col-12">My Users</span>
+  <div class="heroes_users_card col-4 d-flex flex-column" *ngFor="let user of users">
+    <span class="heroes_users_card_name">{{user.name}}</span>
+    <span class="heroes_users_card_email">{{user.email}}</span>
+    <span class="heroes_users_card_phone">{{user.phone}}</span>
+    <span class="heroes_users_card_phone">{{user.address?.city}}</span>
     <app-label [(text)]="user.name"></app-label>
+  </div>
+</div>
+
+<div class="heroes_separator"></div>
+
+<div class="heroes_info row gap-4">
+  <span class="heroes_info_title col-12">My Heroes</span>
+  <!-- <div class="col-4" *ngFor></div> -->
+  <div class="heroes_info_card col-4 d-flex flex-column" *ngFor="let hero of heroes">
+    <span class="heroes_info_card_id" routerLink="/detail/{{hero.id}}">{{hero.id}}</span>
+    <span class="heroes_info_card_name" routerLink="/detail/{{hero.id}}">{{hero.name}}</span>
+    <app-label [(text)]="hero.name"></app-label>
   </div>
 </div>
   

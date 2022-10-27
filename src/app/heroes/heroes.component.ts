@@ -16,7 +16,7 @@ import { User } from '../models/user.model';
 export class HeroesComponent implements OnInit {
 
   heroes: Hero[] = [];
-  selectedHero: Hero;
+  
   users: User[];
 
   hero: Hero = {
@@ -34,7 +34,7 @@ export class HeroesComponent implements OnInit {
   }
 
   onSelect(hero: Hero): void {
-    this.selectedHero = hero;
+    
     this.messageService.add('HeroesComponent: Selected Hero id=${hero.id}');
   }
 
