@@ -31,7 +31,7 @@
       <div class="heroes_info_card_name-container d-flex gap-4">
         <div class="heroes_info_card_name" routerLink="/detail/{{hero.id}}">{{hero.name}}</div>
         <div class="heroes_info_card_separator">-</div>
-        <app-hero-type [(typeId)] = "hero.typeId"></app-hero-type>
+        <app-hero-type [(typeId)]="hero.typeId"></app-hero-type>
       </div>
       <!-- <div *ngIf="hero.typeId"> - {{heroTypesNames[hero.typeId]}}</div> -->
       <app-label [(text)]="hero.name"></app-label>
@@ -59,11 +59,12 @@
   <form>
     <div class="form-group">
       <label for="exampleInputEmail1">Write your name</label>
-      <input [(ngModel)] = "newHero.name" name="name" type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter name">
+      <input [(ngModel)]="newHero.name" name="name" type="email" class="form-control" id="exampleInputEmail1"
+        placeholder="Enter name">
     </div>
     <div class="form-group">
       <label for="exampleFormControlSelect1">Select your class</label>
-      <select [(ngModel)] = "newHero.typeId" name="typeId" class="form-control" id="exampleFormControlSelect1">
+      <select [(ngModel)]="newHero.typeId" name="typeId" class="form-control" id="exampleFormControlSelect1">
         <option value="1">Mago</option>
         <option value="2">Guerrero</option>
         <option value="3">Animal</option>
@@ -75,8 +76,15 @@
   <div class="heroes_separator"></div>
 
   <div class="heroes_section w-100">Calendar</div>
+  <div class="row w-100 d-flex">
+    <p-calendar class="col-4" [(ngModel)]="date14" [inline]="true" [showWeek]="true"></p-calendar>
+    <div class="col-2 row d-flex">
+      <p-dropdown class="col-6" [options]="tiposHeroes" [(ngModel)]="tipoSeleccionado"></p-dropdown>
+      <p-listbox class="col" [options]="tiposHeroes" [(ngModel)]="tipoSeleccionado"></p-listbox>
+      <p-dropdown class="col-6" [options]="tiposHeroes" [(ngModel)]="tipoSeleccionado"></p-dropdown>
+      <p-listbox class="col" [options]="tiposHeroes" [(ngModel)]="tipoSeleccionado"></p-listbox>
+    </div>
 
-  <p-calendar [(ngModel)]="date14" [inline]="true" [showWeek]="true"></p-calendar>
+  </div>
 
-  <p-dropdown [options]="tiposHeroes" [(ngModel)]="tipoSeleccionado" optionValue="code"></p-dropdown>
 </div>
