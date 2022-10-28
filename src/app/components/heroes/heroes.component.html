@@ -31,7 +31,7 @@
       <div class="heroes_info_card_name-container d-flex gap-4">
         <div class="heroes_info_card_name" routerLink="/detail/{{hero.id}}">{{hero.name}}</div>
         <div class="heroes_info_card_separator">-</div>
-        <app-hero-type *ngIf="hero.typeId" [(typeId)] = "hero.typeId"></app-hero-type>
+        <app-hero-type [(typeId)] = "hero.typeId"></app-hero-type>
       </div>
       <!-- <div *ngIf="hero.typeId"> - {{heroTypesNames[hero.typeId]}}</div> -->
       <app-label [(text)]="hero.name"></app-label>
@@ -74,5 +74,9 @@
 
   <div class="heroes_separator"></div>
 
+  <div class="heroes_section w-100">Calendar</div>
 
+  <p-calendar [(ngModel)]="date14" [inline]="true" [showWeek]="true"></p-calendar>
+
+  <p-dropdown [options]="tiposHeroes" [(ngModel)]="tipoSeleccionado" optionValue="code"></p-dropdown>
 </div>

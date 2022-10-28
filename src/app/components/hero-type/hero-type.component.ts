@@ -11,8 +11,8 @@ export class HeroTypeComponent implements OnInit {
 
   heroTypes = heroTypes
   heroTypesNames = heroTypesNames
-  
-  @Input() typeId:number;
+
+  @Input() typeId: number | undefined;
   @Output() typeIdChange: EventEmitter<number> = new EventEmitter();
 
   constructor() { }

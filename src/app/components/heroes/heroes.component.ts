@@ -18,18 +18,25 @@ export class HeroesComponent implements OnInit {
 
   heroes: Hero[] = [];
   newHero: HeroClass = new HeroClass();
+
+  date14:Date;
   
   users: User[];
 
+  tiposHeroes = ['Guerrero','Mago','Animal'
+  ]
+  tipoSeleccionado:string;
   // hero: Hero = {
   //   id: 1,
   //   name: 'Windstorm'
   // }
 
-  // heroTypes = heroTypes
-  // heroTypesNames = heroTypesNames
+  heroTypes = heroTypes
+  heroTypesNames = heroTypesNames
 
-  constructor(private heroService: HeroService, private messageService: MessagesService, private router: Router, private http: HttpClient, private userService: UserService) { }
+  constructor(private heroService: HeroService, private messageService: MessagesService, private router: Router, private http: HttpClient, private userService: UserService) {
+    this.date14 = new Date();
+   }
 
   ngOnInit(): void {
     this.getHeroes();

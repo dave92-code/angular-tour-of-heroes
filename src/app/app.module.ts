@@ -14,6 +14,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
 import { HeroTypeComponent } from './components/hero-type/hero-type.component';
+import { CalendarModule } from 'primeng/calendar';
+import { DropdownModule} from 'primeng/dropdown'
 
 @NgModule({
   declarations: [
@@ -32,7 +34,10 @@ import { HeroTypeComponent } from './components/hero-type/hero-type.component';
     BrowserAnimationsModule,
     MatIconModule,
     HttpClientModule,
-    
+    CalendarModule,
+    BrowserModule,
+    BrowserAnimationsModule,
+    DropdownModule
   ],
   providers: [],
   bootstrap: [AppComponent]
