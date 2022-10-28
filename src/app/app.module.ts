@@ -19,6 +19,9 @@ import { HeroTypeComponent } from './components/hero-type/hero-type.component';
 import { CalendarModule } from 'primeng/calendar';
 import { DropdownModule } from 'primeng/dropdown';
 import { ListboxModule } from 'primeng/listbox';
+import { TareasComponent } from './components/tareas/tareas.component';
+import {CardModule} from 'primeng/card'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +30,8 @@ import { ListboxModule } from 'primeng/listbox';
     DashboardComponent,
     LabelComponent,
     HeroTypeComponent,
-    HeroesComponent
+    HeroesComponent,
+    TareasComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +44,8 @@ import { ListboxModule } from 'primeng/listbox';
     BrowserModule,
     BrowserAnimationsModule,
     DropdownModule,
-    ListboxModule
+    ListboxModule,
+    CardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

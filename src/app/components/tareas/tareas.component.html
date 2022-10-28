@@ -1,0 +1,38 @@
+<!-- <div class="tareas d-flex flex-wrap gap-2 ">
+  <p-card styleClass="tareas_card" *ngFor="let tarea of tareas" header="{{tarea.title}}" [style]="{'width': '25rem', 'height':'200px','border':'1px solid'}"
+  [ngStyle]="{'background-color': tarea.completed ? '#4dff4d20' : '#ff1a1a20'}">
+    <p class="tareas_card_text" *ngIf="tarea.completed === false">
+      tarea sin completar
+    </p>
+    <p class="tareas_card_text" *ngIf="tarea.completed === true">
+      tarea completada!
+    </p>
+  </p-card>
+</div> -->
+
+<div class="tareas d-flex flex-wrap gap-2">
+  <!-- <div class="tareas_card d-flex flex-column justify-content-between gap-4" *ngFor="let tarea of tareas"
+  [class.completed]="tarea.completed" 
+  [ngStyle]="{'background-color': tarea.completed ? '#4dff4d20' : '#ff1a1a20'}"
+  > -->
+  <div class="tareas_card d-flex flex-column justify-content-between gap-4" *ngFor="let tarea of tareas"
+  [class.completed]="tarea.completed">
+    <span class="tareas_card_header">
+      {{tarea.title}}
+    </span>
+    <div class="tareas_card_info d-flex justify-content-between">
+      <span class="tareas_card_info_text" *ngIf="tarea.completed === false">
+        tarea sin completar
+      </span>
+      <span class="tareas_card_info_text" *ngIf="tarea.completed === true">
+        tarea completada!
+      </span>
+      <span class="tareas_card_info_role" *ngIf="tarea.userId === 1">
+        Administrador
+      </span>
+      <span class="tareas_card_info_role" *ngIf="tarea.userId === 2">
+        Moderador
+      </span>
+    </div>
+  </div>
+</div>
