@@ -9,24 +9,26 @@ import { firstValueFrom } from 'rxjs';
 })
 export class UserService {
 
+  private UsersUrl = 'api/users';
+
   constructor(private http: HttpClient) { }
 
   /**sacamos los users con susbcribe*/
   getUsers(): Observable<User[]> {
     const url = 'https://jsonplaceholder.typicode.com/users';
-    return this.http.get<User[]>(url);
+    return this.http.get<User[]>(this.UsersUrl);
   }
 
   /**sacamos los users con promesa */
   getUsersPromise(): Promise<User[]> {
     const url = 'https://jsonplaceholder.typicode.com/users';
-     return firstValueFrom(this.http.get<User[]>(url))
+     return firstValueFrom(this.http.get<User[]>(this.UsersUrl))
   }
 
   /**sacamos los users con await */
   getUsersPromiseAsync(): Promise<User[]> {
     const url = 'https://jsonplaceholder.typicode.com/users';
-    return  firstValueFrom(this.http.get<User[]>(url));
+    return  firstValueFrom(this.http.get<User[]>(this.UsersUrl));
   }
 
 }

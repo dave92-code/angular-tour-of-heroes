@@ -7,12 +7,14 @@ import { firstValueFrom } from 'rxjs';
 })
 export class TareaService {
 
+  private tareasUrl = 'api/tareas';
+
   constructor(private http:HttpClient) { }
 
 
   getTareas():Promise<any>{
     const url = ' https://jsonplaceholder.typicode.com/todos';
-    return firstValueFrom(this.http.get(url));
+    return firstValueFrom(this.http.get(this.tareasUrl));
   }
-  
+
 }

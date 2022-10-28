@@ -14,13 +14,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
 import { HeroTypeComponent } from './components/hero-type/hero-type.component';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService } from './services/in-memory-data.service';
 
 //componentes de prime-ng
 import { CalendarModule } from 'primeng/calendar';
 import { DropdownModule } from 'primeng/dropdown';
 import { ListboxModule } from 'primeng/listbox';
 import { TareasComponent } from './components/tareas/tareas.component';
-import {CardModule} from 'primeng/card'
+import { CardModule } from 'primeng/card';
+import { HeroSearchComponent } from './components/hero-search/hero-search.component'
+
 
 @NgModule({
   declarations: [
@@ -31,7 +35,8 @@ import {CardModule} from 'primeng/card'
     LabelComponent,
     HeroTypeComponent,
     HeroesComponent,
-    TareasComponent
+    TareasComponent,
+    HeroSearchComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +50,13 @@ import {CardModule} from 'primeng/card'
     BrowserAnimationsModule,
     DropdownModule,
     ListboxModule,
-    CardModule
+    CardModule,
+    // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
+    // and returns simulated server responses.
+    // Remove it when a real server is ready to receive requests.
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryDataService, { dataEncapsulation: false }
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]

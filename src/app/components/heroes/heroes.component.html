@@ -29,6 +29,7 @@
     <div class="heroes_info_card col-4 row d-flex flex-column justify-between gap-2" *ngFor="let hero of heroes">
       <div class="heroes_info_card_id col-12" routerLink="/detail/{{hero.id}}">{{hero.id}}</div>
       <div class="heroes_info_card_name-container d-flex gap-4">
+        <button type="button" class="delete" title="delete hero" (click)="delete(hero)">x</button>
         <div class="heroes_info_card_name" routerLink="/detail/{{hero.id}}">{{hero.name}}</div>
         <div class="heroes_info_card_separator">-</div>
         <app-hero-type [(typeId)]="hero.typeId"></app-hero-type>
@@ -84,7 +85,16 @@
       <p-dropdown class="col-6" [options]="tiposHeroes" [(ngModel)]="tipoSeleccionado"></p-dropdown>
       <p-listbox class="col" [options]="tiposHeroes" [(ngModel)]="tipoSeleccionado"></p-listbox>
     </div>
+  </div>
 
+  <div>
+    <label for="new-hero">Hero name: </label>
+    <input id="new-hero" #heroName />
+
+    <!-- (click) passes input value to add() and then clears the input -->
+    <button type="button" class="add-button" (click)="add(heroName.value); heroName.value=''">
+      Add hero
+    </button>
   </div>
 
 </div>
