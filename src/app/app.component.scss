@@ -1,11 +1,15 @@
-.button-heroes{
-    padding: 10px 20px 10px;
-    font-size: 18px;
-    background-color: rgb(206, 198, 198);
-    color: #000;
-    border-radius: 25px;
-    cursor: pointer;
+.menu{
+  flex: 0 0 150px;
+  background: rgb(103, 197, 251);
+  height: 100vh;
 }
-.button-heroes:hover{
-    background-color: rgb(112, 109, 109)
+.header{
+
+}
+.content{
+  flex: 1 0 120vh;
+  padding-left: 20px;
+}
+.content::-webkit-scrollbar{
+  max-width: 5px;
 }

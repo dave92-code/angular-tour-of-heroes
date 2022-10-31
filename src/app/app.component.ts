@@ -15,9 +15,7 @@ export class AppComponent {
     this.iconsService.registerIcons();
   }
 
-  goTo(route:string){
-    this.router.navigate([route])
-  }
+  
 
   //angular json stilos
   // "styles": [

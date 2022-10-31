@@ -17,13 +17,16 @@ import { HeroTypeComponent } from './components/hero-type/hero-type.component';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './services/in-memory-data.service';
 
+
 //componentes de prime-ng
 import { CalendarModule } from 'primeng/calendar';
 import { DropdownModule } from 'primeng/dropdown';
 import { ListboxModule } from 'primeng/listbox';
 import { TareasComponent } from './components/tareas/tareas.component';
 import { CardModule } from 'primeng/card';
-import { HeroSearchComponent } from './components/hero-search/hero-search.component'
+import { HeroSearchComponent } from './components/hero-search/hero-search.component';
+import { MenuComponent } from './components/menu/menu.component';
+import { HeaderComponent } from './components/header/header.component'
 
 
 @NgModule({
@@ -36,7 +39,9 @@ import { HeroSearchComponent } from './components/hero-search/hero-search.compon
     HeroTypeComponent,
     HeroesComponent,
     TareasComponent,
-    HeroSearchComponent
+    HeroSearchComponent,
+    MenuComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

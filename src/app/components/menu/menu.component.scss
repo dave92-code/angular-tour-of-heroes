@@ -1,0 +1,18 @@
+.button-heroes{
+  padding: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  color: #fff;
+  text-decoration: none;
+}
+.button-heroes:hover{
+  text-decoration: underline;
+}
+.menu{
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  width: 10%;
+  left: 0;
+  padding-right: 10px;
+}
