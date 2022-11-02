@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Todos } from 'src/app/models/todos.model';
 import { TareaService } from 'src/app/services/tarea.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { TareaService } from 'src/app/services/tarea.service';
 })
 export class TareasComponent implements OnInit {
 
-  tareas: any[];
+  tareas: Todos[];
 
   constructor(private tareaService: TareaService) { }
 

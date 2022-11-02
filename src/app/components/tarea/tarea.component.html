@@ -14,11 +14,8 @@
         <span class="tarea_info_text" *ngIf="tarea.completed === true">
           tarea completada!
         </span>
-        <span class="tarea_info_role" *ngIf="tarea.userId === 1">
-          Administrador
-        </span>
-        <span class="tarea_info_role" *ngIf="tarea.userId === 2">
-          Moderador
+        <span class="tarea_info_role" *ngIf="tarea.userId">
+          {{allUsersNames[tarea.userId]}}
         </span>
       </div>
     </div>

@@ -1,4 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { allUsers, allUsersNames } from 'src/app/constants/todos.constant';
+import { Todos } from 'src/app/models/todos.model';
 
 @Component({
   selector: 'app-tarea',
@@ -7,7 +9,10 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class TareaComponent implements OnInit {
 
-  @Input() tarea: any;
+  allUsers = allUsers;
+  allUsersNames = allUsersNames
+  @Input() tarea: Todos;
+  // @Output() tareaChange: EventEmitter<any> = new EventEmitter()
 
   constructor() { }
 

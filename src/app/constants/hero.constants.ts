@@ -1,6 +1,3 @@
-
-
-
 const heroTypes = {
   MAGICIAN: 1,
   WARRIOR:2,

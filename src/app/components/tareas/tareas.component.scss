@@ -1,10 +1,11 @@
 .tareas{
-  
+
   &_tarea{
     width: calc(25% - 6px);
   }
 }
 .tareas-test {
+
   &_boot-card {
     background-color: #ff1a1a20;
     height: 200px;
@@ -15,6 +16,7 @@
     &_content{
       height: 100%;
       padding: 15px;
+
       &_header {
         font-size: 18px;
         font-weight: 600;
@@ -27,8 +29,9 @@
       }
   
       &_info {
+        
         &_text {
-          font-size: 14px;
+          font-size: 18px;
         }
   
         &_role {

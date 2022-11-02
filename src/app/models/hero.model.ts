@@ -11,3 +11,4 @@ export class HeroClass {
   selected?: boolean;
   typeId?: number;
 }
+
