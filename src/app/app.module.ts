@@ -26,7 +26,8 @@ import { TareasComponent } from './components/tareas/tareas.component';
 import { CardModule } from 'primeng/card';
 import { HeroSearchComponent } from './components/hero-search/hero-search.component';
 import { MenuComponent } from './components/menu/menu.component';
-import { HeaderComponent } from './components/header/header.component'
+import { HeaderComponent } from './components/header/header.component';
+import { TareaComponent } from './components/tarea/tarea.component'
 
 
 @NgModule({
@@ -41,7 +42,8 @@ import { HeaderComponent } from './components/header/header.component'
     TareasComponent,
     HeroSearchComponent,
     MenuComponent,
-    HeaderComponent
+    HeaderComponent,
+    TareaComponent
   ],
   imports: [
     BrowserModule,

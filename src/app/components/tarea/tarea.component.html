@@ -1,0 +1,24 @@
+<!-- <div class="tareas_card d-flex flex-column justify-content-between gap-4" *ngFor="let tarea of tareas"
+    [class.completed]="tarea.completed" 
+    [ngStyle]="{'background-color': tarea.completed ? '#4dff4d20' : '#ff1a1a20'}"
+    > -->
+    <div class="tarea d-flex flex-column justify-content-between gap-4"
+    [class.completed]="tarea.completed">
+      <span class="tarea_header">
+        {{tarea.title}}
+      </span>
+      <div class="tarea_info d-flex justify-content-between">
+        <span class="tarea_info_text" *ngIf="tarea.completed === false">
+          tarea sin completar
+        </span>
+        <span class="tarea_info_text" *ngIf="tarea.completed === true">
+          tarea completada!
+        </span>
+        <span class="tarea_info_role" *ngIf="tarea.userId === 1">
+          Administrador
+        </span>
+        <span class="tarea_info_role" *ngIf="tarea.userId === 2">
+          Moderador
+        </span>
+      </div>
+    </div>

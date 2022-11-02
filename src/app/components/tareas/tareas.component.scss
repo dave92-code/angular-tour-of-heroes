@@ -1,58 +1,39 @@
-.tareas {
-  position: relative;
-  margin-bottom: 20px;
-
-  &_card {
-    background-color: #ff1a1a20;
-    height: 200px;
-    padding: 15px;
-    border: 1px solid;
-    border-radius: 6px;
+.tareas{
+  
+  &_tarea{
     width: calc(25% - 6px);
-
-    &_header {
-      font-size: 18px;
-      font-weight: 600;
-    }
-
-    &_info {
-      &_text {
-        font-size: 14px;
-      }
-
-      &_role {
-        font-weight: 600;
-      }
-    }
   }
 }
-
 .tareas-test {
   &_boot-card {
     background-color: #ff1a1a20;
     height: 200px;
-    padding: 15px;
+    // padding: 15px;
     border: 1px solid;
     border-radius: 6px;
 
-    &_header {
-      font-size: 18px;
-      font-weight: 600;
-      // white-space: nowrap;
-      // overflow: hidden;
-      // width: 80%;
-      // text-overflow: ellipsis;
-      // width: 80%;
-      // word-break: break-word;
-    }
-
-    &_info {
-      &_text {
-        font-size: 14px;
-      }
-
-      &_role {
+    &_content{
+      height: 100%;
+      padding: 15px;
+      &_header {
+        font-size: 18px;
         font-weight: 600;
+        // white-space: nowrap;
+        // overflow: hidden;
+        // width: 80%;
+        // text-overflow: ellipsis;
+        // width: 80%;
+        // word-break: break-word;
+      }
+  
+      &_info {
+        &_text {
+          font-size: 14px;
+        }
+  
+        &_role {
+          font-weight: 600;
+        }
       }
     }
   }
