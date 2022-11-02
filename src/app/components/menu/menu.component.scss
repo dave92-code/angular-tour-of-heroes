@@ -8,11 +8,13 @@
 .button-heroes:hover{
   text-decoration: underline;
 }
-.menu{
+.menu-items{
   display: flex;
   position: fixed;
   flex-direction: column;
-  width: 10%;
+  height: 100%;
+  flex: 0 0 150px;
+  background-color: rgb(103, 197, 251);
   left: 0;
   padding-right: 10px;
 }
