@@ -29,7 +29,7 @@
       }
   
       &_info {
-        
+
         &_text {
           font-size: 18px;
         }
@@ -42,8 +42,34 @@
   }
 }
 
+.prueba{
+
+  &_card{
+    height: 200px;
+    
+    &_content{
+      border: 1px solid;
+      border-radius: 6px;
+      padding: 15px;
+      background-color: #ff1a1a20;
+      &_header{
+        font-size: 18px;
+        font-weight: 600;
+      }
+
+      &_info{
+
+      }
+      &_role{
+        font-weight: 600;
+        
+      }
+    }
+  }
+}
+
 .completed {
-  background-color: #4dff4d20;
+  background-color: #4dff4d20 !important;
 }
 
 //mixin test

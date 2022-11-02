@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { allUsersNames } from 'src/app/constants/todos.constant';
 import { Todos } from 'src/app/models/todos.model';
 import { TareaService } from 'src/app/services/tarea.service';
 
@@ -10,6 +11,7 @@ import { TareaService } from 'src/app/services/tarea.service';
 export class TareasComponent implements OnInit {
 
   tareas: Todos[];
+  allUsersNames = allUsersNames;
 
   constructor(private tareaService: TareaService) { }
 
