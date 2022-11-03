@@ -1,9 +1,10 @@
-.tareas{
+.tareas {
 
-  &_tarea{
+  &_tarea {
     width: calc(25% - 6px);
   }
 }
+
 .tareas-test {
 
   &_boot-card {
@@ -13,7 +14,7 @@
     border: 1px solid;
     border-radius: 6px;
 
-    &_content{
+    &_content {
       height: 100%;
       padding: 15px;
 
@@ -27,13 +28,13 @@
         // width: 80%;
         // word-break: break-word;
       }
-  
+
       &_info {
 
         &_text {
           font-size: 18px;
         }
-  
+
         &_role {
           font-weight: 600;
         }
@@ -42,27 +43,27 @@
   }
 }
 
-.prueba{
+.prueba {
 
-  &_card{
-    height: 200px;
-    
-    &_content{
+  &_card {
+
+
+    &_content {
       border: 1px solid;
       border-radius: 6px;
       padding: 15px;
       background-color: #ff1a1a20;
-      &_header{
+      height: 200px;
+      &_header {
         font-size: 18px;
         font-weight: 600;
       }
 
-      &_info{
+      &_info {}
 
-      }
-      &_role{
+      &_role {
         font-weight: 600;
-        
+
       }
     }
   }

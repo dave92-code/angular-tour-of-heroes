@@ -11,7 +11,10 @@ export class TareaComponent implements OnInit {
 
   allUsers = allUsers;
   allUsersNames = allUsersNames
-  @Input() tarea: Todos;
+  // @Inçput() tarea: Todos;
+  @Input() titulo: string | undefined;
+  @Input() completed: boolean | undefined;
+  @Input() userId: number | undefined;
   // @Output() tareaChange: EventEmitter<any> = new EventEmitter()
 
   constructor() { }

@@ -1,32 +1,30 @@
-<div class="container mb-5">
+<div class="container-fluid mb-5">
   <!--Ejercicio Tareas con componente-->
   <div class="tareas d-flex flex-wrap gap-2 mb-5">
-    <app-tarea [tarea]="tarea" *ngFor="let tarea of tareas" class="tareas_tarea"></app-tarea>
+    <app-tarea [titulo]="tarea.title" [completed]="tarea.completed" [userId]="tarea.userId" *ngFor="let tarea of tareas" class="tareas_tarea"></app-tarea>
   </div>
 
   <div class="w-100"></div>
 
   <!--aplicacion de metodo sencillo-->
-  <div class="prueba row row-col-1 row-cols-sm-1 row-cols-lg-3 row-cols-md-2 g-sm-1 g-md-2 g-lg-3 mt-5">
-
-    <div class="prueba_card justify-content-between d-flex col" *ngFor="let tarea of tareas">
-     <div class="prueba_card_content d-flex justify-content-between flex-wrap" [class.completed]="tarea.completed">
-      <div class="prueba_card_content_header w-100">{{tarea.title}}</div>
-      <div *ngIf="tarea.completed === false" class="prueba_card_content_info d-flex align-items-end w-50">
-        SIN COMPLETAR
+  <div class="prueba row row-col-1 row-cols-sm-1 row-cols-xl-3 row-cols-lg-3 row-cols-md-2 g-sm-1 g-md-2 g-lg-3 mt-5">
+    <div class="prueba_card col" *ngFor="let tarea of tareas">
+      <div class="prueba_card_content d-flex justify-content-between flex-wrap" [class.completed]="tarea.completed">
+        <div class="prueba_card_content_header w-100">{{tarea.title}}</div>
+        <div *ngIf="tarea.completed === false" class="prueba_card_content_info d-flex align-items-end w-50">
+          SIN COMPLETAR
+        </div>
+        <div *ngIf="tarea.completed === true" class="prueba_card_content_info d-flex align-items-end w-50">
+          COMPLETADA!
+        </div>
+        <div class="prueba_card_content_role d-flex align-items-end w-50 justify-content-end" *ngIf="tarea.userId">
+          {{allUsersNames[tarea.userId]}}
+        </div>
       </div>
-      <div *ngIf="tarea.completed === true" class="prueba_card_content_info d-flex align-items-end w-50">
-        COMPLETADA!
-      </div>
-      <div class="prueba_card_content_role d-flex align-items-end w-50 justify-content-end" *ngIf="tarea.userId">
-        {{allUsersNames[tarea.userId]}}
-      </div>
-     </div>
     </div>
-
   </div>
 
   <div class="w-100"></div>
 
-  
+
 </div>

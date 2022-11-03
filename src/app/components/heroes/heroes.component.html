@@ -57,33 +57,68 @@
 
   <div class="heroes_section w-100">Pruebas layouts</div>
 
-  <form>
-    <div class="form-group">
-      <label for="exampleInputEmail1">Write your name</label>
-      <input [(ngModel)]="newHero.name" name="name" type="email" class="form-control" id="exampleInputEmail1"
-        placeholder="Enter name">
+  <div class="row w-100">
+    <div class="col-12 col-lg-6 col-md-12 col-sm-12">
+      <form>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Write your name</label>
+          <input [(ngModel)]="newHero.name" name="name" type="email" class="form-control" id="exampleInputEmail1"
+            placeholder="Enter name">
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlSelect1">Select your class</label>
+          <select [(ngModel)]="newHero.typeId" name="typeId" class="form-control" id="exampleFormControlSelect1">
+            <option value="1">Mago</option>
+            <option value="2">Guerrero</option>
+            <option value="3">Animal</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
     </div>
-    <div class="form-group">
-      <label for="exampleFormControlSelect1">Select your class</label>
-      <select [(ngModel)]="newHero.typeId" name="typeId" class="form-control" id="exampleFormControlSelect1">
-        <option value="1">Mago</option>
-        <option value="2">Guerrero</option>
-        <option value="3">Animal</option>
-      </select>
+    <div class="col-12 col-lg-6 col-md-12 col-sm-12">
+      <form>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Write your name</label>
+          <input [(ngModel)]="newHero.name" name="name" type="email" class="form-control" id="exampleInputEmail1"
+            placeholder="Enter name">
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlSelect1">Select your class</label>
+          <select [(ngModel)]="newHero.typeId" name="typeId" class="form-control" id="exampleFormControlSelect1">
+            <option value="1">Mago</option>
+            <option value="2">Guerrero</option>
+            <option value="3">Animal</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </form>
+  </div>
+
+
 
   <div class="heroes_separator"></div>
 
   <div class="heroes_section w-100">Calendar</div>
-  <div class="row w-100 d-flex">
-    <p-calendar class="col-4" [(ngModel)]="date14" [inline]="true" [showWeek]="true"></p-calendar>
-    <div class="col-2 row d-flex">
-      <p-dropdown class="col-6" [options]="tiposHeroes" [(ngModel)]="tipoSeleccionado"></p-dropdown>
-      <p-listbox class="col" [options]="tiposHeroes" [(ngModel)]="tipoSeleccionado"></p-listbox>
-      <p-dropdown class="col-6" [options]="tiposHeroes" [(ngModel)]="tipoSeleccionado"></p-dropdown>
-      <p-listbox class="col" [options]="tiposHeroes" [(ngModel)]="tipoSeleccionado"></p-listbox>
+
+  <div class="row w-100">
+    <div class="col-12 col-lg-6 col-md-12">
+      <p-calendar class="w-100"[(ngModel)]="date14" [inline]="true" [showWeek]="true"></p-calendar>
+    </div>
+    <div class="col-12 col-lg-6 col-md-12 row mt-sm-2">
+      <div class="col-12">
+        <p-dropdown [options]="tiposHeroes" [(ngModel)]="tipoSeleccionado"></p-dropdown>
+      </div>
+      <div class="col-12">
+        <p-listbox [options]="tiposHeroes" [(ngModel)]="tipoSeleccionado"></p-listbox>
+      </div>
+      <div class="col-12">
+        <p-dropdown [options]="tiposHeroes" [(ngModel)]="tipoSeleccionado"></p-dropdown>
+      </div>
+      <div class="col-12">
+        <p-listbox [options]="tiposHeroes" [(ngModel)]="tipoSeleccionado"></p-listbox>
+      </div>
     </div>
   </div>
 
