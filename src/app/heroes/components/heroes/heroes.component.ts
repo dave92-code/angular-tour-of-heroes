@@ -10,7 +10,7 @@ import { User } from '../../models/user.model';
 
 import { HeroService } from 'src/app/shared/services/hero.service';
 import { UserService } from 'src/app/shared/services/user.service';
-import { heroTypes, heroTypesNames } from 'src/app/constants/hero.constants';
+import { heroTypes, heroTypesNames } from 'src/app/heroes/models/hero.constants';
 
 @Component({
   selector: 'app-heroes',

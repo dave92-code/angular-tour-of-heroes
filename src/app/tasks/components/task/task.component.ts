@@ -3,11 +3,11 @@ import { allUsers, allUsersNames } from 'src/app/tasks/models/todos.constant';
 import { Todos } from 'src/app/tasks/models/todos.model';
 
 @Component({
-  selector: 'app-tarea',
-  templateUrl: './tarea.component.html',
-  styleUrls: ['./tarea.component.scss']
+  selector: 'app-task',
+  templateUrl: './task.component.html',
+  styleUrls: ['./task.component.scss']
 })
-export class TareaComponent implements OnInit {
+export class TaskComponent implements OnInit {
 
   allUsers = allUsers;
   allUsersNames = allUsersNames

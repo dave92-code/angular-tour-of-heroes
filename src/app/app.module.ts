@@ -22,12 +22,10 @@ import { InMemoryDataService } from './shared/services/in-memory-data.service';
 import { CalendarModule } from 'primeng/calendar';
 import { DropdownModule } from 'primeng/dropdown';
 import { ListboxModule } from 'primeng/listbox';
-import { TareasComponent } from './tasks/components/tareas/tareas.component';
 import { CardModule } from 'primeng/card';
 
 import { MenuComponent } from './components/menu/menu.component';
 import { HeaderComponent } from './components/header/header.component';
-import { TareaComponent } from './tasks/components/tarea/tarea.component'
 import { TasksModule } from './tasks/tasks.module';
 import { SharedModule } from './shared/shared.module';
 import { HeroesModule } from './heroes/heroes.module';

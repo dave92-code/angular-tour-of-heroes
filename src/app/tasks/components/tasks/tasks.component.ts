@@ -4,11 +4,11 @@ import { Todos } from 'src/app/tasks/models/todos.model';
 import { TareaService } from 'src/app/shared/services/tarea.service';
 
 @Component({
-  selector: 'app-tareas',
-  templateUrl: './tareas.component.html',
-  styleUrls: ['./tareas.component.scss']
+  selector: 'app-tasks',
+  templateUrl: './tasks.component.html',
+  styleUrls: ['./tasks.component.scss']
 })
-export class TareasComponent implements OnInit {
+export class TasksComponent implements OnInit {
 
   tareas: Todos[];
   allUsersNames = allUsersNames;
