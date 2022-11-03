@@ -1,11 +1,13 @@
 import { Injectable } from '@angular/core';
 import { InMemoryDbService } from 'angular-in-memory-web-api';
+import { HEROES } from 'src/app/heroes/models/mock-heroes';
+import { usersMock } from 'src/app/heroes/models/mock.users';
 
-import { Hero } from '../models/hero.model';
-import { HEROES } from '../models/mock-heroes';
-import { todos } from '../models/mock-todos';
-import { usersMock } from '../models/mock.users';
-import { Todos } from '../models/todos.model';
+import { Hero } from '../../heroes/models/hero.model';
+
+import { todos } from '../../tasks/models/mock-todos';
+
+import { Todos } from '../../tasks/models/todos.model';
 
 
 

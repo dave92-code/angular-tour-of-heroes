@@ -1,7 +1,8 @@
 <div class="container-fluid mb-5">
   <!--Ejercicio Tareas con componente-->
   <div class="tareas d-flex flex-wrap gap-2 mb-5">
-    <app-tarea [titulo]="tarea.title" [completed]="tarea.completed" [userId]="tarea.userId" *ngFor="let tarea of tareas" class="tareas_tarea"></app-tarea>
+    <app-tarea [titulo]="tarea.title" [completed]="tarea.completed" [userId]="tarea.userId" *ngFor="let tarea of tareas"
+      class="tareas_tarea"></app-tarea>
   </div>
 
   <div class="w-100"></div>

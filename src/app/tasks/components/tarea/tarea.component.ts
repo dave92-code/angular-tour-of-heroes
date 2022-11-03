@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { allUsers, allUsersNames } from 'src/app/constants/todos.constant';
-import { Todos } from 'src/app/models/todos.model';
+import { allUsers, allUsersNames } from 'src/app/tasks/models/todos.constant';
+import { Todos } from 'src/app/tasks/models/todos.model';
 
 @Component({
   selector: 'app-tarea',

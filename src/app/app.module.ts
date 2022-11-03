@@ -4,51 +4,45 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeroesComponent } from './components/heroes/heroes.component';
-import { HeroDetailComponent } from './components/hero-detail/hero-detail.component';
-import { HeroService } from './services/hero.service';
-import { MessagesComponent } from './components/messages/messages.component';
+
+import { HeroDetailComponent } from './heroes/components/hero-detail/hero-detail.component';
+import { HeroService } from './shared/services/hero.service';
+import { MessagesComponent } from './heroes/components/messages/messages.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { LabelComponent } from './components/label/label.component';
+import { LabelComponent } from './heroes/components/label/label.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
-import { HeroTypeComponent } from './components/hero-type/hero-type.component';
+
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService } from './services/in-memory-data.service';
+import { InMemoryDataService } from './shared/services/in-memory-data.service';
 
 
 //componentes de prime-ng
 import { CalendarModule } from 'primeng/calendar';
 import { DropdownModule } from 'primeng/dropdown';
 import { ListboxModule } from 'primeng/listbox';
-import { TareasComponent } from './components/tareas/tareas.component';
+import { TareasComponent } from './tasks/components/tareas/tareas.component';
 import { CardModule } from 'primeng/card';
-import { HeroSearchComponent } from './components/hero-search/hero-search.component';
+
 import { MenuComponent } from './components/menu/menu.component';
 import { HeaderComponent } from './components/header/header.component';
-import { TareaComponent } from './components/tarea/tarea.component'
+import { TareaComponent } from './tasks/components/tarea/tarea.component'
+import { TasksModule } from './tasks/tasks.module';
+import { SharedModule } from './shared/shared.module';
+import { HeroesModule } from './heroes/heroes.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeroDetailComponent,
-    MessagesComponent,
-    DashboardComponent,
-    LabelComponent,
-    HeroTypeComponent,
-    HeroesComponent,
-    TareasComponent,
-    HeroSearchComponent,
     MenuComponent,
     HeaderComponent,
-    TareaComponent
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
     BrowserAnimationsModule,
     MatIconModule,
     HttpClientModule,
@@ -58,6 +52,10 @@ import { TareaComponent } from './components/tarea/tarea.component'
     DropdownModule,
     ListboxModule,
     CardModule,
+    TasksModule,
+    HeroesModule,
+    SharedModule,
+    
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
     // and returns simulated server responses.
     // Remove it when a real server is ready to receive requests.

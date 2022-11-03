@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatIconRegistry } from '@angular/material/icon'
-import { Icons } from '../icons';
+import { Icons } from '../../icons';
 
 
 @Injectable({

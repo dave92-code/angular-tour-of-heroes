@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { allUsersNames } from 'src/app/constants/todos.constant';
-import { Todos } from 'src/app/models/todos.model';
-import { TareaService } from 'src/app/services/tarea.service';
+import { allUsersNames } from 'src/app/tasks/models/todos.constant';
+import { Todos } from 'src/app/tasks/models/todos.model';
+import { TareaService } from 'src/app/shared/services/tarea.service';
 
 @Component({
   selector: 'app-tareas',

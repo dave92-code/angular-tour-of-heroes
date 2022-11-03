@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
-import { IconsService } from './services/icons.service';
+import { IconsService } from './shared/services/icons.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
