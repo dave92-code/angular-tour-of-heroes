@@ -13,9 +13,11 @@ export class TaskComponent implements OnInit {
   allUsers = allUsers;
   allUsersNames = allUsersNames
   // @Inçput() tarea: Todos;
+  @Input() id:number | undefined;
   @Input() titulo: string | undefined;
   @Input() completed: boolean | undefined;
   @Input() userId: number | undefined;
+  @Output() statusChange:EventEmitter<any> = new EventEmitter();
   // @Output() tareaChange: EventEmitter<any> = new EventEmitter()
 
   constructor(private router:Router) { }
@@ -25,6 +27,12 @@ export class TaskComponent implements OnInit {
 
   goToTask(){
     // this.router.navigate([''])
+    this.completed = !this.completed
+    let aux={
+      id:this.id,
+      completed:this.completed
+    }
+    this.statusChange.emit(aux);
   }
 
 }

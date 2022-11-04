@@ -10,6 +10,7 @@ import { TareaService } from 'src/app/shared/services/tarea.service';
 })
 export class TasksPageComponent implements OnInit {
 
+
   tareas: Todos[];
   allUsersNames = allUsersNames;
   completedTasks: number;
@@ -29,9 +30,20 @@ export class TasksPageComponent implements OnInit {
   getCompleted(){
     let tareasCompleted=this.tareas.filter(tarea => tarea.completed === true);
     let completedTasksLength = tareasCompleted.length;
-
     this.completedTasks = (completedTasksLength * 100) / this.tareas.length;
     console.log(this.completedTasks);
+    console.log(this.tareas);
   }
+
+  reCalcTasks(aux:any){
+      let auxTask = this.tareas.find(task => task.id === aux.id)
+      if(auxTask){
+        auxTask.completed = aux.completed;
+        this.getCompleted();
+      }
+     
+  }
+
+  
 
 }
