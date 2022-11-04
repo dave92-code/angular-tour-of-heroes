@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 
 import { HeroDetailComponent } from './heroes/components/hero-detail/hero-detail.component';
 import { HeroService } from './shared/services/hero.service';
-import { MessagesComponent } from './heroes/components/messages/messages.component';
+import { MessagesComponent } from './shared/components/messages/messages.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { LabelComponent } from './heroes/components/label/label.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';

@@ -3,10 +3,10 @@ import { CommonModule } from '@angular/common';
 
 import { HeroesRoutingModule } from './heroes-routing.module';
 import { HeroTypeComponent } from './components/hero-type/hero-type.component';
-import { HeroesComponent } from './components/heroes/heroes.component';
+import { HeroesPageComponent } from './components/heroes/heroes-page.component';
 import { HeroSearchComponent } from './components/hero-search/hero-search.component';
 import { HeroDetailComponent } from './components/hero-detail/hero-detail.component';
-import { MessagesComponent } from './components/messages/messages.component';
+import { MessagesComponent } from '../shared/components/messages/messages.component';
 import { SharedModule } from '../shared/shared.module';
 import { LabelComponent } from './components/label/label.component';
 import { CalendarModule } from 'primeng/calendar';
@@ -17,10 +17,9 @@ import { ListboxModule } from 'primeng/listbox';
 @NgModule({
   declarations: [
     HeroTypeComponent,
-    HeroesComponent,
+    HeroesPageComponent,
     HeroSearchComponent,
     HeroDetailComponent,
-    MessagesComponent,
     LabelComponent
   ],
   imports: [
@@ -33,10 +32,9 @@ import { ListboxModule } from 'primeng/listbox';
   ],
   exports:[
     HeroTypeComponent,
-    HeroesComponent,
+    HeroesPageComponent,
     HeroSearchComponent,
     HeroDetailComponent,
-    MessagesComponent,
     LabelComponent
   ]
 })

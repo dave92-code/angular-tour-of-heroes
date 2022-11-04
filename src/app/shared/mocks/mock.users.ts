@@ -1,4 +1,4 @@
-import { User } from "./user.model";
+import { User } from "../../heroes/models/user.model";
 
 export const usersMock: User[] = [
   { id: 12, name: 'Dr. Nice' },

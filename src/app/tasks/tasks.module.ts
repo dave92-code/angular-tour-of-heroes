@@ -3,14 +3,14 @@ import { CommonModule } from '@angular/common';
 
 import { TasksRoutingModule } from './tasks-routing.module';
 import { TaskComponent } from './components/task/task.component';
-import { TasksComponent } from './components/tasks/tasks.component';
+import { TasksPageComponent } from './components/tasks/tasks-page.component';
 import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
   declarations: [
     TaskComponent,
-    TasksComponent
+    TasksPageComponent
   ],
   imports: [
     CommonModule,

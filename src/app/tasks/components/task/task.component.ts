@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
 import { allUsers, allUsersNames } from 'src/app/tasks/models/todos.constant';
 import { Todos } from 'src/app/tasks/models/todos.model';
 
@@ -17,9 +18,13 @@ export class TaskComponent implements OnInit {
   @Input() userId: number | undefined;
   // @Output() tareaChange: EventEmitter<any> = new EventEmitter()
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
+  }
+
+  goToTask(){
+    // this.router.navigate([''])
   }
 
 }

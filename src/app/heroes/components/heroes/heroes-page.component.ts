@@ -13,21 +13,21 @@ import { UserService } from 'src/app/shared/services/user.service';
 import { heroTypes, heroTypesNames } from 'src/app/heroes/models/hero.constants';
 
 @Component({
-  selector: 'app-heroes',
-  templateUrl: './heroes.component.html',
-  styleUrls: ['./heroes.component.scss']
+  selector: 'app-heroes-page',
+  templateUrl: './heroes-page.component.html',
+  styleUrls: ['./heroes-page.component.scss']
 })
-export class HeroesComponent implements OnInit {
+export class HeroesPageComponent implements OnInit {
 
   heroes: Hero[] = [];
-  newHero: HeroClass = new HeroClass();
+  newHero = new HeroClass();
+  
 
   date14:Date;
   
   users: User[];
 
-  tiposHeroes = ['Guerrero','Mago','Animal'
-  ]
+  tiposHeroes = ['Guerrero','Mago','Animal']
   tipoSeleccionado:string;
   // hero: Hero = {
   //   id: 1,
@@ -120,4 +120,14 @@ export class HeroesComponent implements OnInit {
   //   console.log(event)
   //   hero.name = event;
   // }
+
+  onClickAddHero():void{
+    // this.add(this.newHero.name);
+    // this.newHero.name = '';
+  }
+
+  onSubmit(){
+    this.add(this.newHero.name);
+    this.newHero.name = '';
+  }
 }

@@ -1,4 +1,4 @@
-import { Todos } from "./todos.model";
+import { Todos } from "../../tasks/models/todos.model";
 
 export const todos:Todos[] = [
   { userId: 1, id: 101, title: 'explicabo enim cumque porro aperiam occaecati minima', completed: false },

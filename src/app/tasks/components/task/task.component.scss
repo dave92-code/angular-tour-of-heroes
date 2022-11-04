@@ -6,7 +6,7 @@
   border: 1px solid;
   border-radius: 6px;
   width: 100%;
-
+  cursor: pointer;
   &_header {
     font-size: 18px;
     font-weight: 600;
@@ -24,6 +24,14 @@
   }
 }
 
+.tarea:hover{
+  background-color:#ff1a1a40 ;
+}
+
 .completed {
   background-color: #4dff4d20;
+}
+
+.completed:hover{
+  background-color:#4dff4d40 !important;
 }

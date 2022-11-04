@@ -77,21 +77,24 @@
       </form>
     </div>
     <div class="col-12 col-lg-6 col-md-12 col-sm-12">
-      <form>
+      <form class="form-container">
         <div class="form-group">
           <label for="exampleInputEmail1">Write your name</label>
           <input [(ngModel)]="newHero.name" name="name" type="email" class="form-control" id="exampleInputEmail1"
             placeholder="Enter name">
         </div>
-        <div class="form-group">
+
+        <!-- <div class="form-group">
           <label for="exampleFormControlSelect1">Select your class</label>
           <select [(ngModel)]="newHero.typeId" name="typeId" class="form-control" id="exampleFormControlSelect1">
             <option value="1">Mago</option>
             <option value="2">Guerrero</option>
             <option value="3">Animal</option>
           </select>
+        </div> -->
+        <div class="align-items-start">
+          <button type="submit" class="btn btn-primary align-bottom">Submit</button>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
       </form>
     </div>
   </div>
@@ -104,7 +107,7 @@
 
   <div class="row w-100">
     <div class="col-12 col-lg-6 col-md-12 col-sm-12">
-      <p-calendar class="w-100"[(ngModel)]="date14" [inline]="true" [showWeek]="true"></p-calendar>
+      <p-calendar class="w-100" [(ngModel)]="date14" [inline]="true" [showWeek]="true"></p-calendar>
     </div>
     <div class="col-12 col-lg-6 col-md-12 col-sm-12 row mt-sm-2 mt-md-0">
       <div class="col-12">
@@ -123,13 +126,16 @@
   </div>
 
   <div>
-    <label for="new-hero">Hero name: </label>
-    <input id="new-hero" #heroName />
-
-    <!-- (click) passes input value to add() and then clears the input -->
-    <button type="button" class="add-button" (click)="add(heroName.value); heroName.value=''">
-      Add hero
-    </button>
+    <form #heroForm="ngForm" name="heroesCreateForm" (ngSubmit)="onSubmit()">
+      <label for="new-hero">Hero name: </label>
+      <input id="new-hero" [(ngModel)]="newHero.name" name="name" required #name="ngModel"/>
+      <!-- (click) passes input value to add() and then clears the input -->
+      <button type="submit" [disabled]="!heroForm.form.valid" class="add-button">
+        Add hero
+      </button>
+    </form>
   </div>
 
-</div>
+  <div class="heroes_separator"></div>
+
+  <div class="heroes_section w-100">More components</div>
