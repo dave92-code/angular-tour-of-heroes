@@ -125,25 +125,37 @@
     </div>
   </div>
 
-  <div>
+  <!-- <div>
     <form #heroForm="ngForm" name="heroesCreateForm" (ngSubmit)="onSubmit()">
       <label for="new-hero">Hero name: </label>
       <input id="new-hero" [(ngModel)]="newHero.name" name="name" required #name="ngModel" />
-      <!-- (click) passes input value to add() and then clears the input -->
       <button type="submit" [disabled]="!heroForm.form.valid" class="add-button">
         Add hero
       </button>
     </form>
-  </div>
+  </div> -->
 
   <div class="heroes_separator"></div>
 
   <div class="heroes_section w-100">More Forms</div>
 
-  <a class="btn btn-primary" (click)="heroFormTest.reset()">RESET FORM</a>
+  <p-dialog [(visible)]="displayPopNewHero" [modal]="true" [breakpoints]="{'960px': '75vw', '640px': '100vw'}"
+    [style]="{width: '50vw'}">
+    <form #heroForm="ngForm" name="heroesCreateForm" (ngSubmit)="onSubmit()">
+      <label for="new-hero">Hero name: </label>
+      <input id="new-hero" [(ngModel)]="newHero.name" name="name" required #name="ngModel" />
+      <button type="submit" [disabled]="!heroForm.form.valid" class="add-button">
+        Add hero
+      </button>
+    </form>
+  </p-dialog>
+
+  <button class="btn btn-primary" (click)="onClickOpenPopUp()">CREATE A HERO!</button>
+
+  <button class="btn btn-primary" (click)="heroFormTest.reset()">RESET FORM</button>
 
 
-  <form #heroFormTest="ngForm" name="heroesCreateForm" (ngSubmit)="onSubmit()"
+  <form #heroFormTest="ngForm" name="heroesCreateForm" (ngSubmit)="onSubmitTest()"
     class="form-container row w-100 flex-row">
     <div class="form-group col-6 col-sm-12 col-md-6 col-lg-6 mb-3">
       <label for="new-hero-test">Hero name: </label>

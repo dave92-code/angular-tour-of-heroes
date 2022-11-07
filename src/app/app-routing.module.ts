@@ -10,7 +10,6 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   // { path: 'detail/:id', component: HeroDetailComponent },
   {path: 'heroes', loadChildren: () => import('./heroes/heroes.module').then(m => m.HeroesModule)},
-
   // { path: 'tareas', component: TasksComponent }
   //lazy load :)
   {path: 'tareas', loadChildren: () => import('./tasks/tasks.module').then(m => m.TasksModule)},

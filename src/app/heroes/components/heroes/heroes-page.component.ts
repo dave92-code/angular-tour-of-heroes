@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { Hero, HeroClass } from '../../models/hero.model';
 // import { HEROES } from '../mock-heroes';
@@ -11,6 +11,7 @@ import { User } from '../../models/user.model';
 import { HeroService } from 'src/app/shared/services/hero.service';
 import { UserService } from 'src/app/shared/services/user.service';
 import { heroTypes, heroTypesNames } from 'src/app/heroes/models/hero.constants';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-heroes-page',
@@ -19,9 +20,16 @@ import { heroTypes, heroTypesNames } from 'src/app/heroes/models/hero.constants'
 })
 export class HeroesPageComponent implements OnInit {
 
+  //variables de hero
   heroes: Hero[] = [];
   newHero = new HeroClass();
   newHeroTest = new HeroClass();
+
+  //variable formulario
+  @ViewChild('heroFormTest') formHero: NgForm;
+
+  //variables de popups
+  displayPopNewHero:boolean = false;
   
 
   date14:Date;
@@ -130,5 +138,14 @@ export class HeroesPageComponent implements OnInit {
   onSubmit(){
     this.add(this.newHero.name);
     this.newHero.name = '';
+    this.displayPopNewHero = false;
+  }
+
+  onSubmitTest(){
+    // this.formHero.resetForm();
+  }
+
+  onClickOpenPopUp(){
+    this.displayPopNewHero = true;
   }
 }
