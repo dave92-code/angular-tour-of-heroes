@@ -27,6 +27,7 @@ export class HeroesPageComponent implements OnInit {
 
   //variable formulario
   @ViewChild('heroFormTest') formHero: NgForm;
+  @ViewChild('heroForm') heroForm: NgForm;
 
   //variables de popups
   displayPopNewHero:boolean = false;
@@ -147,5 +148,10 @@ export class HeroesPageComponent implements OnInit {
 
   onClickOpenPopUp(){
     this.displayPopNewHero = true;
+  }
+
+  closePopUp(){
+    this.displayPopNewHero = false;
+    this.heroForm.resetForm();
   }
 }
