@@ -30,15 +30,15 @@ export class HeroesPageComponent implements OnInit {
   @ViewChild('heroForm') heroForm: NgForm;
 
   //variables de popups
-  displayPopNewHero:boolean = false;
-  
+  displayPopNewHero: boolean = false;
 
-  date14:Date;
-  
+
+  date14: Date;
+
   users: User[];
 
-  tiposHeroes = ['Guerrero','Mago','Animal']
-  tipoSeleccionado:string;
+  tiposHeroes = ['Guerrero', 'Mago', 'Animal']
+  tipoSeleccionado: string;
   // hero: Hero = {
   //   id: 1,
   //   name: 'Windstorm'
@@ -49,7 +49,7 @@ export class HeroesPageComponent implements OnInit {
 
   constructor(private heroService: HeroService, private messageService: MessagesService, private router: Router, private http: HttpClient, private userService: UserService) {
     this.date14 = new Date();
-   }
+  }
 
   ngOnInit(): void {
     this.getHeroes();
@@ -59,7 +59,7 @@ export class HeroesPageComponent implements OnInit {
   }
 
   onSelect(hero: Hero): void {
-    
+
     this.messageService.add('HeroesComponent: Selected Hero id=${hero.id}');
   }
 
@@ -131,27 +131,34 @@ export class HeroesPageComponent implements OnInit {
   //   hero.name = event;
   // }
 
-  onClickAddHero():void{
+  onClickAddHero(): void {
     // this.add(this.newHero.name);
     // this.newHero.name = '';
   }
 
-  onSubmit(){
+  onSubmit() {
     this.add(this.newHero.name);
     this.newHero.name = '';
     this.displayPopNewHero = false;
   }
 
-  onSubmitTest(){
+  onSubmitTest() {
     // this.formHero.resetForm();
   }
 
-  onClickOpenPopUp(){
+  onClickOpenPopUp() {
     this.displayPopNewHero = true;
   }
 
-  closePopUp(){
+  closePopUp() {
     this.displayPopNewHero = false;
     this.heroForm.resetForm();
   }
+
+  // onPopUpClose(popUpData: any) {
+  //   if (popUpData) {
+  //     this.add(popUpData);
+  //   }
+  //   this.displayPopNewHero = false;
+  // }
 }

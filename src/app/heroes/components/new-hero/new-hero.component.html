@@ -1,0 +1,18 @@
+<p-dialog header="{{header}}" [(visible)]="displayPopUp" [modal]="true"
+    [breakpoints]="{'960px': '75vw', '640px': '100vw'}" [style]="{width: '50vw'}">
+    <form #heroForm="ngForm" name="heroesCreateForm" (ngSubmit)="onSubmit()" class="d-flex flex-column" >
+      <label for="new-hero">Hero name: </label>
+      <input id="new-hero" [(ngModel)]="newHeroName" name="name" required #name="ngModel" class="mb-3" />
+      <div class="d-flex justify-content-between">
+        <button type="submit" [disabled]="!heroForm.form.valid" class="add-button mb-0 me-0">
+          {{buttonAcceptText}}
+        </button>
+        <button type="button" class="add-button mb-0 me-0" (click) = "closePopUp()">
+          Cancel
+        </button>
+      </div>
+    </form>
+    <ng-template pTemplate="footer">
+      <p-button icon="pi pi-check" label="Create" styleClass="p-button-text"></p-button>
+    </ng-template>
+  </p-dialog>

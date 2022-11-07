@@ -12,6 +12,7 @@ import { LabelComponent } from './components/label/label.component';
 import { CalendarModule } from 'primeng/calendar';
 import { DropdownModule } from 'primeng/dropdown';
 import { ListboxModule } from 'primeng/listbox';
+import { NewHeroComponent } from './components/new-hero/new-hero.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { ListboxModule } from 'primeng/listbox';
     HeroesPageComponent,
     HeroSearchComponent,
     HeroDetailComponent,
-    LabelComponent
+    LabelComponent,
+    NewHeroComponent
   ],
   imports: [
     SharedModule,
