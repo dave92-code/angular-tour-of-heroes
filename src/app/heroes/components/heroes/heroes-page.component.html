@@ -128,7 +128,7 @@
   <div>
     <form #heroForm="ngForm" name="heroesCreateForm" (ngSubmit)="onSubmit()">
       <label for="new-hero">Hero name: </label>
-      <input id="new-hero" [(ngModel)]="newHero.name" name="name" required #name="ngModel"/>
+      <input id="new-hero" [(ngModel)]="newHero.name" name="name" required #name="ngModel" />
       <!-- (click) passes input value to add() and then clears the input -->
       <button type="submit" [disabled]="!heroForm.form.valid" class="add-button">
         Add hero
@@ -138,4 +138,33 @@
 
   <div class="heroes_separator"></div>
 
-  <div class="heroes_section w-100">More components</div>
+  <div class="heroes_section w-100">More Forms</div>
+
+  <a class="btn btn-primary" (click)="heroFormTest.reset()">RESET FORM</a>
+
+
+  <form #heroFormTest="ngForm" name="heroesCreateForm" (ngSubmit)="onSubmit()"
+    class="form-container row w-100 flex-row">
+    <div class="form-group col-6 col-sm-12 col-md-6 col-lg-6 mb-3">
+      <label for="new-hero-test">Hero name: </label>
+      <input id="new-hero-test" [(ngModel)]="newHeroTest.name" name="name" required #name="ngModel"
+        class="form-control" />
+    </div>
+    <div class="form-group col-6 col-sm-12 col-md-6 col-lg-6 mb-3">
+      <label for="new-hero-test-id">Hero id: </label>
+      <input id="new-hero-test-id" [(ngModel)]="newHeroTest.id" name="id" required #name="ngModel" class="form-control"
+        #newherotestid="ngModel" />
+      <div [hidden]="newherotestid.valid || newherotestid.pristine" class="alert alert-danger">
+        Id is required
+      </div>
+    </div>
+    <div class="form-group col-12 col-sm-12 col-md-12 col-lg-12 mb-3">
+      <label for="new-hero-test-typeid">Hero typeId: </label>
+      <input id="new-hero-test-typoid" [(ngModel)]="newHeroTest.typeId" name="typeid" required #name="ngModel"
+        class="form-control" />
+    </div>
+    <!-- (click) passes input value to add() and then clears the input -->
+    <button type="submit" [disabled]="!heroFormTest.form.valid" class="add-button">
+      Add hero
+    </button>
+  </form>

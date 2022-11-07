@@ -21,6 +21,7 @@ export class HeroesPageComponent implements OnInit {
 
   heroes: Hero[] = [];
   newHero = new HeroClass();
+  newHeroTest = new HeroClass();
   
 
   date14:Date;
