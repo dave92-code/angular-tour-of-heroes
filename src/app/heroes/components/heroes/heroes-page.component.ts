@@ -10,7 +10,7 @@ import { User } from '../../models/user.model';
 
 import { HeroService } from 'src/app/shared/services/hero.service';
 import { UserService } from 'src/app/shared/services/user.service';
-import { heroTypes, heroTypesNames } from 'src/app/heroes/models/hero.constants';
+import { heroTypes, heroTypesImgs, heroTypesNames } from 'src/app/heroes/models/hero.constants';
 import { NgForm } from '@angular/forms';
 
 @Component({
@@ -46,6 +46,7 @@ export class HeroesPageComponent implements OnInit {
 
   heroTypes = heroTypes
   heroTypesNames = heroTypesNames
+  heroTypesImgs = heroTypesImgs
 
   constructor(private heroService: HeroService, private messageService: MessagesService, private router: Router, private http: HttpClient, private userService: UserService) {
     this.date14 = new Date();
@@ -53,6 +54,7 @@ export class HeroesPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.getHeroes();
+    console.log(this.heroTypesImgs)
     // this.getUsers();
     // this.getUsersPromise();
     this.getUsersPromiseAsync();

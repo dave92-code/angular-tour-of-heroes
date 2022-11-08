@@ -23,7 +23,7 @@
     &_card {
       background-color: #fff;
       border: 1px solid #000;
-      
+
       padding: 15px;
 
       &_name-container {
@@ -85,10 +85,49 @@
       }
     }
   }
+
+  &_container {
+    &_card {
+
+      &_content {
+        height: 150px;
+        padding: 10px;
+        background-color: #3399ff20;
+        border: 1px solid;
+        border-radius: 4px;
+        cursor: pointer;
+        position: relative;
+
+        &_img {
+         height: 50px;
+         position: absolute;
+         bottom: 10px;
+         left: 10px;
+         width: 50px;
+         background-size: contain;
+        }
+
+        &_id {
+
+          &_span {
+            padding: 5px;
+            border: 1px solid;
+            border-radius: 5px;
+            background-color: #000;
+            color: #fff;
+          }
+        }
+      }
+
+      &_content:hover {
+        background-color: #3399ff;
+      }
+    }
+  }
 }
 
 //pruebas forms
-.form-container{
+.form-container {
   height: 100%;
   display: flex;
   flex-direction: column;

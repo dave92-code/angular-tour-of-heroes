@@ -22,6 +22,29 @@
 
   <div class="heroes_separator"></div>
 
+  <div class="heroes_section w-100">My Superheroes</div>
+
+  <div class="heroes_container row w-100">
+    <div class="heroes_container_card col-sm-12 col-md-6 col-lg-3 mb-3" *ngFor="let hero of heroes">
+      <div class="heroes_container_card_content d-flex flex-column justify-content-between" routerLink="/detail/{{hero.id}}">
+      <div class="heroes_container_card_content_img" *ngIf="hero.typeId" [ngStyle]="{'background-image' : 'url('+ heroTypesImgs[hero.typeId] +')'}">
+
+      </div>
+        <div class="heroes_container_card_content_info">
+          <div class="heroes_container_card_content_info_name">Nombre: {{hero.name}}</div>
+          <app-hero-type class="heroes_container_card_content_info_type" [(typeId)]="hero.typeId"></app-hero-type>
+        </div>
+        <div class="heroes_container_card_content_id d-flex justify-content-end">
+          <span class="heroes_container_card_content_id_span">
+            {{hero.id}}
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="heroes_separator"></div>
+
   <div class="heroes_section">My Heroes</div>
 
   <div class="heroes_info row gap-4 no-gutters">
@@ -146,21 +169,21 @@
   (data)="onPopUpClose($event)"></app-new-hero> -->
   <p-dialog header="create a new hero!" [(visible)]="displayPopNewHero" [modal]="true"
     [breakpoints]="{'960px': '75vw', '640px': '100vw'}" [style]="{width: '50vw'}" (onHide)="closePopUp()">
-    <form #heroForm="ngForm" name="heroesCreateForm" (ngSubmit)="onSubmit()" class="d-flex flex-column" >
+    <form #heroForm="ngForm" name="heroesCreateForm" (ngSubmit)="onSubmit()" class="d-flex flex-column">
       <label for="new-hero">Hero name: </label>
       <input id="new-hero" [(ngModel)]="newHero.name" name="name" required #name="ngModel" class="mb-3" />
       <div class="d-flex justify-content-between">
         <button type="submit" [disabled]="!heroForm.form.valid" class="add-button mb-0 me-0">
           Add hero
         </button>
-        <button type="button" class="add-button mb-0 me-0" (click) = "closePopUp()">
+        <button type="button" class="add-button mb-0 me-0" (click)="closePopUp()">
           Cancel
         </button>
       </div>
     </form>
-    <ng-template pTemplate="footer">
+    <!-- <ng-template pTemplate="footer">
       <p-button icon="pi pi-check" label="Create" styleClass="p-button-text"></p-button>
-    </ng-template>
+    </ng-template> -->
   </p-dialog>
 
   <button class="btn btn-primary" (click)="onClickOpenPopUp()">CREATE A HERO!</button>
