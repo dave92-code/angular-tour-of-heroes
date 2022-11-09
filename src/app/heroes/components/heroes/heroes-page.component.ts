@@ -12,6 +12,7 @@ import { HeroService } from 'src/app/shared/services/hero.service';
 import { UserService } from 'src/app/shared/services/user.service';
 import { heroTypes, heroTypesImgs, heroTypesNames } from 'src/app/heroes/models/hero.constants';
 import { NgForm } from '@angular/forms';
+import { MenuItem } from 'primeng/api';
 
 @Component({
   selector: 'app-heroes-page',
@@ -32,6 +33,12 @@ export class HeroesPageComponent implements OnInit {
   //variables de popups
   displayPopNewHero: boolean = false;
 
+  //variables componentes
+  //toggle
+  toggleChecked:boolean = false;
+  //menuitems
+  items: MenuItem[];
+  //------------------------------
 
   date14: Date;
 
@@ -53,6 +60,30 @@ export class HeroesPageComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.items = [
+      {
+          label: 'File',
+          items: [{
+                  label: 'New', 
+                  icon: 'pi pi-fw pi-plus',
+                  items: [
+                      {label: 'Project'},
+                      {label: 'Other'},
+                  ]
+              },
+              {label: 'Open'},
+              {label: 'Quit'}
+          ]
+      },
+      {
+          label: 'Edit',
+          icon: 'pi pi-fw pi-pencil',
+          items: [
+              {label: 'Delete', icon: 'pi pi-fw pi-trash'},
+              {label: 'Refresh', icon: 'pi pi-fw pi-refresh'}
+          ]
+      }
+  ]
     this.getHeroes();
     console.log(this.heroTypesImgs)
     // this.getUsers();

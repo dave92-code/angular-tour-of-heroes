@@ -2,7 +2,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { MessagesComponent } from './components/messages/messages.component';
-import {  DialogModule } from 'primeng/dialog'
+import {  DialogModule } from 'primeng/dialog';
+import {ToggleButtonModule} from 'primeng/togglebutton';
+import {SlideMenuModule} from 'primeng/slidemenu';
 
 
 
@@ -18,7 +20,9 @@ import {  DialogModule } from 'primeng/dialog'
   exports:[
     FormsModule,
     MessagesComponent,
-    DialogModule
+    DialogModule,
+    ToggleButtonModule,
+    SlideMenuModule
   ]
 })
 export class SharedModule { }

@@ -26,12 +26,16 @@
 
   <div class="heroes_container row w-100">
     <div class="heroes_container_card col-sm-12 col-md-6 col-lg-3 mb-3" *ngFor="let hero of heroes">
-      <div class="heroes_container_card_content d-flex flex-column justify-content-between" routerLink="/detail/{{hero.id}}">
-      <div class="heroes_container_card_content_img" *ngIf="hero.typeId" [ngStyle]="{'background-image' : 'url('+ heroTypesImgs[hero.typeId] +')'}">
-
-      </div>
+      <div class="heroes_container_card_content d-flex flex-column justify-content-between"
+        routerLink="/detail/{{hero.id}}">
+        <div class="heroes_container_card_content_img" *ngIf="hero.typeId"
+          [ngStyle]="{'background-image' : 'url('+ heroTypesImgs[hero.typeId] +')'}">
+        </div>
         <div class="heroes_container_card_content_info">
-          <div class="heroes_container_card_content_info_name">Nombre: {{hero.name}}</div>
+          <div class="heroes_container_card_content_info_name d-flex justify-content-between">
+            <span class="heroes_container_card_content_info_name_span">Nombre: {{hero.name}}</span>
+            <span class="heroes_container_card_content_info_name_delete" (click)="delete(hero)">x</span>
+          </div>
           <app-hero-type class="heroes_container_card_content_info_type" [(typeId)]="hero.typeId"></app-hero-type>
         </div>
         <div class="heroes_container_card_content_id d-flex justify-content-end">
@@ -216,3 +220,12 @@
       Add hero
     </button>
   </form>
+
+  <div class="heroes_section w-100">More components</div>
+
+  <p-toggleButton [(ngModel)]="toggleChecked" onIcon="pi pi-check" offIcon="pi pi-times"></p-toggleButton>
+
+  <p-slideMenu #menu [model]="items" [popup]="true"></p-slideMenu>
+  <button #btn type="button" pButton icon="pi pi-list" label="Show" (click)="menu.toggle($event)"></button>
+
+</div>
