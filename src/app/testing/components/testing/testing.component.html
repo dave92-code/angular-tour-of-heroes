@@ -1,0 +1,91 @@
+<div class="testing-page container-fluid">
+
+  <div>
+    <p-divider align="center">
+      <span>Accordion</span>
+    </p-divider>
+  </div>
+
+  <div>
+    <p-accordion>
+      <p-accordionTab header="Header 1">
+        Content 1
+      </p-accordionTab>
+      <p-accordionTab header="Header 2">
+        Content 2
+      </p-accordionTab>
+      <p-accordionTab header="Header 3">
+        Content 3
+      </p-accordionTab>
+    </p-accordion>
+  </div>
+
+  <div>
+    <p-divider align="center">
+      <span>togglebutton</span>
+    </p-divider>
+  </div>
+
+  <div>
+    <p-toggleButton [(ngModel)]="toggleChecked" onIcon="pi pi-check" offIcon="pi pi-times"></p-toggleButton>
+  </div>
+
+  <div>
+    <p-divider align="center">
+      <span>slideMenu</span>
+    </p-divider>
+  </div>
+
+
+  <p-slideMenu #menu [model]="items" [popup]="true"></p-slideMenu>
+  <div>
+    <button #btn type="button" pButton icon="pi pi-list" label="Show" (click)="menu.toggle($event)"></button>
+  </div>
+
+  <div>
+    <p-divider align="center">
+      <span>Tabs</span>
+    </p-divider>
+  </div>
+
+  <div>
+    <p-tabMenu [model]="tabs"></p-tabMenu>
+  </div>
+
+  <div>
+    <p-divider align="center">
+      <span>Messages</span>
+    </p-divider>
+  </div>
+
+  <p-messages severity="info">
+    <ng-template pTemplate>
+      <i class="pi pi-check"></i>
+      <div class="ml-2">Always bet on Prime.</div>
+    </ng-template>
+  </p-messages>
+
+  <div>
+    <p-divider align="center">
+      <span>Toasts</span>
+    </p-divider>
+  </div>
+
+  <p-toast position="bottom-center"></p-toast>
+
+  <div class="card">
+    <h5>Severities</h5>
+    <button type="button" pButton pRipple (click)="showSuccess()" label="Success"
+      class="p-button-success mb-2"></button>
+    <button type="button" pButton pRipple (click)="showInfo()" label="Info" class="p-button-info mb-2"></button>
+    <button type="button" pButton pRipple (click)="showWarn()" label="Warn" class="p-button-warning mb-2"></button>
+    <button type="button" pButton pRipple (click)="showError()" label="Error" class="p-button-danger mb-2"></button>
+    <h5>Clear</h5>
+    <button type="button" pButton pRipple (click)="clear()" icon="pi pi-times" label="Clear"></button>
+  </div>
+
+
+
+
+
+</div>

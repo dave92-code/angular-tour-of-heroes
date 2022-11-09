@@ -13,6 +13,7 @@ const routes: Routes = [
   // { path: 'tareas', component: TasksComponent }
   //lazy load :)
   {path: 'tareas', loadChildren: () => import('./tasks/tasks.module').then(m => m.TasksModule)},
+  {path: 'testing', loadChildren: () => import('./testing/testing.module').then(m => m.TestingModule)},
 
 ];
 

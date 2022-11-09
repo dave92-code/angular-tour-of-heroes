@@ -1,3 +1,5 @@
+
+
 .heroes {
   width: 100%;
   padding: 25px;
@@ -92,7 +94,7 @@
       &_content {
         height: 150px;
         padding: 10px;
-        background-color: #3399ff20;
+        background-color: var(--color-1);
         border: 1px solid;
         border-radius: 4px;
         cursor: pointer;
@@ -136,7 +138,7 @@
       }
 
       &_content:hover {
-        background-color: #3399ff;
+        background-color: var(--color-1-dark);
       }
     }
   }

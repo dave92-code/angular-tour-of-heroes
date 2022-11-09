@@ -25,7 +25,7 @@
   <div class="heroes_section w-100">My Superheroes</div>
 
   <div class="heroes_container row w-100">
-    <div class="heroes_container_card col-sm-12 col-md-6 col-lg-3 mb-3" *ngFor="let hero of heroes">
+    <div class="heroes_container_card col-12 col-md-6 col-lg-3 mb-3" *ngFor="let hero of heroes">
       <div class="heroes_container_card_content d-flex flex-column justify-content-between"
         routerLink="/detail/{{hero.id}}">
         <div class="heroes_container_card_content_img" *ngIf="hero.typeId"
@@ -222,8 +222,6 @@
   </form>
 
   <div class="heroes_section w-100">More components</div>
-
-  <p-toggleButton [(ngModel)]="toggleChecked" onIcon="pi pi-check" offIcon="pi pi-times"></p-toggleButton>
 
   <p-slideMenu #menu [model]="items" [popup]="true"></p-slideMenu>
   <button #btn type="button" pButton icon="pi pi-list" label="Show" (click)="menu.toggle($event)"></button>

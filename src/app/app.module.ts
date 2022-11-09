@@ -36,7 +36,7 @@ import { HeroesModule } from './heroes/heroes.module';
     AppComponent,
     MenuComponent,
     HeaderComponent,
-    DashboardComponent
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
