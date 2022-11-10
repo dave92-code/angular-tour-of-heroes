@@ -3,7 +3,7 @@
 .heroes {
   width: 100%;
   padding: 25px;
-  border: 1px solid rgb(112, 110, 110);
+  border: 1px solid var(--color-grey);
   background-color: rgb(246, 246, 246);
   display: flex;
   flex-wrap: wrap;
@@ -12,7 +12,7 @@
 
   &_separator {
     height: 2px;
-    background-color: #000;
+    background-color: var(--color-black);
     width: 100%;
   }
 
@@ -22,21 +22,22 @@
   }
 
   &_info {
-    &_card {
-      background-color: #fff;
-      border: 1px solid #000;
 
+    &_card {
+      background-color: var(--color-white);
+      border: 1px solid var(--color-black);
       padding: 15px;
 
       &_name-container {
+
         &_name {
           font-size: 18px;
           font-weight: 600;
           cursor: pointer;
-        }
 
-        &_name:hover {
-          color: rgb(106, 106, 106);
+          &:hover{
+            color: var(--color-grey-dark)
+          }
         }
 
         &_separator {
@@ -49,27 +50,28 @@
         font-size: 20px;
         font-weight: 300;
         padding: 10px;
-        background-color: rgb(13, 36, 103);
-        color: #fff;
+        background-color: var(--color-1);
+        color: var(--color-white);
         text-align: center;
         cursor: pointer;
-      }
 
-      &_id:hover {
-        background-color: rgb(25, 66, 190);
+        &:hover{
+          background-color: var(--color-1-dark);
+        }
       }
     }
   }
 
   &_users {
+
     &_title {
       font-size: 34px;
       font-weight: 600;
     }
 
     &_card {
-      background-color: #fff;
-      border: 1px solid #000;
+      background-color: var(--color-white);
+      border: 1px solid var(--color-black);
       width: calc(33.33% - 20px);
       padding: 15px;
 
@@ -89,6 +91,7 @@
   }
 
   &_container {
+
     &_card {
 
       &_content {
@@ -100,6 +103,10 @@
         cursor: pointer;
         position: relative;
 
+        &:hover{
+          background-color: var(--color-1-dark);
+        }
+
         &_img {
           height: 50px;
           position: absolute;
@@ -110,17 +117,19 @@
         }
 
         &_info {
+
           &_name {
+            
             &_delete {
               padding: 5px 10px;
               border: 1px solid;
               border-radius: 5px;
-              background-color: #000;
-              color: #fff;
-            }
+              background-color: var(--color-red);
+              color: var(--color-white);
 
-            &_delete:hover {
-              background-color: rgb(236, 76, 76);
+              &:hover{
+                background-color: var(--color-red-dark)
+              }
             }
           }
         }
@@ -129,16 +138,12 @@
 
           &_span {
             padding: 5px;
-            border: 1px solid;
+            border: 1px solid var(--color-grey);
             border-radius: 5px;
-            background-color: #000;
-            color: #fff;
+            background-color: var(--color-black);
+            color: var(--color-white);
           }
         }
-      }
-
-      &_content:hover {
-        background-color: var(--color-1-dark);
       }
     }
   }

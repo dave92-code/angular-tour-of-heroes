@@ -1,8 +1,20 @@
-
-
 :root {
+  //colores
   --base-color-1: 200, 60%;
   --color-1: hsla(var(--base-color-1), 80%);
   --color-1-dark: hsla(var(--base-color-1), 60%);
   --color-1-light: hsla(var(--base-color-1), 100%);
+
+  --color-black: hsla(0, 0%, 0%);
+  --color-white: hsla(0, 0%, 100%);
+
+  --base-color-red:0,60%;
+  --color-red: hsla(var(--base-color-red),60%);
+  --color-red-dark: hsla(var(--base-color-red),40%);
+  --color-red-light: hsla(var(--base-color-red),60%);
+
+  --base-color-grey:0,0%;
+  --color-grey: hsla(var(--base-color-grey),60%);
+  --color-grey-dark: hsla(var(--base-color-grey),40%);
+  --color-grey-light: hsla(var(--base-color-grey),60%);
 }
