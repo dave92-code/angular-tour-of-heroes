@@ -13,11 +13,25 @@ import { UserService } from 'src/app/shared/services/user.service';
 import { heroTypes, heroTypesImgs, heroTypesNames } from 'src/app/heroes/models/hero.constants';
 import { NgForm } from '@angular/forms';
 import { MenuItem } from 'primeng/api';
+import { Table } from 'primeng/table';
 
 @Component({
   selector: 'app-heroes-page',
   templateUrl: './heroes-page.component.html',
-  styleUrls: ['./heroes-page.component.scss']
+  styleUrls: ['./heroes-page.component.scss'],
+  styles: [`
+        :host ::ng-deep .p-datatable .p-datatable-thead > tr > th {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            /* align-self: flex-start;
+            height: auto; */
+        }
+
+        .layout-news-active :host ::ng-deep .p-datatable tr > th {
+            top: 7rem;
+        }
+    `]
 })
 export class HeroesPageComponent implements OnInit {
 
@@ -35,9 +49,11 @@ export class HeroesPageComponent implements OnInit {
 
   //variables componentes
   //toggle
-  toggleChecked:boolean = false;
+  toggleChecked: boolean = false;
   //menuitems
   items: MenuItem[];
+  //table
+  inputSearch: String;
   //------------------------------
 
   date14: Date;
@@ -62,28 +78,28 @@ export class HeroesPageComponent implements OnInit {
   ngOnInit(): void {
     this.items = [
       {
-          label: 'File',
-          items: [{
-                  label: 'New', 
-                  icon: 'pi pi-fw pi-plus',
-                  items: [
-                      {label: 'Project'},
-                      {label: 'Other'},
-                  ]
-              },
-              {label: 'Open'},
-              {label: 'Quit'}
+        label: 'File',
+        items: [{
+          label: 'New',
+          icon: 'pi pi-fw pi-plus',
+          items: [
+            { label: 'Project' },
+            { label: 'Other' },
           ]
+        },
+        { label: 'Open' },
+        { label: 'Quit' }
+        ]
       },
       {
-          label: 'Edit',
-          icon: 'pi pi-fw pi-pencil',
-          items: [
-              {label: 'Delete', icon: 'pi pi-fw pi-trash'},
-              {label: 'Refresh', icon: 'pi pi-fw pi-refresh'}
-          ]
+        label: 'Edit',
+        icon: 'pi pi-fw pi-pencil',
+        items: [
+          { label: 'Delete', icon: 'pi pi-fw pi-trash' },
+          { label: 'Refresh', icon: 'pi pi-fw pi-refresh' }
+        ]
       }
-  ]
+    ]
     this.getHeroes();
     console.log(this.heroTypesImgs)
     // this.getUsers();
@@ -186,6 +202,10 @@ export class HeroesPageComponent implements OnInit {
   closePopUp() {
     this.displayPopNewHero = false;
     this.heroForm.resetForm();
+  }
+
+  clear(table: Table) {
+    table.clear();
   }
 
   // onPopUpClose(popUpData: any) {

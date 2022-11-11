@@ -1,7 +1,7 @@
 const heroTypes = {
-  MAGICIAN: 1,
-  WARRIOR:2,
-  ANIMAL:3
+  MAGICIAN: 2,
+  WARRIOR:3,
+  ANIMAL:1
 };
 
 const heroTypesNames = {

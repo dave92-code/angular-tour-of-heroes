@@ -17,7 +17,8 @@ import { MessagesModule } from 'primeng/messages';
 import { MessageModule } from 'primeng/message';
 import { ToastModule } from 'primeng/toast';
 import { MessageService } from 'primeng/api';
-
+import {TableModule} from 'primeng/table';
+import {InputTextModule} from 'primeng/inputtext';
 
 
 
@@ -46,7 +47,9 @@ import { MessageService } from 'primeng/api';
     TabMenuModule,
     MessagesModule,
     MessageModule,
-    ToastModule
+    ToastModule,
+    TableModule,
+    InputTextModule
   ],
   providers:[
     MessageService
